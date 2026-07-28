@@ -1,7 +1,7 @@
 +++
 date = '2026-07-28T19:29:55+08:00'
 draft = false
-title = 'My First Post'
+title = '我的第一篇帖子'
 +++
 大家好！我是Harmonicoscillator。
 
