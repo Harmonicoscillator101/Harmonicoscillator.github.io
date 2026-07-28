@@ -1,9 +1,41 @@
 baseURL = "https://harmonicoscillator101.github.io/"
 locale = "zh-cn"
-title = "我的个人网站"
+title = "Harmonicoscillator的个人网站"
 theme = "PaperMod"
 
-[params.homeInfoParams]
+[params]
   math = true
+  # 以下两行可以保留，但 profileMode 开启后，头像由 imageUrl 控制
+  # avatar = "/images/mostima.jpg"   # 可注释掉或删除
+
+[params.profileMode]
+  enabled = true
   title = "嗨，欢迎来到我的小站！"
-  Content = "这是一段介绍文字。"
+  subtitle = "我是来自华科物理学院的本科生，现在正在被学业折磨中。"
+  imageUrl = "/images/mostima.jpg"
+  imageTitle = "我的头像"
+  # 可以添加一些按钮
+  [[params.profileMode.buttons]]
+    name = "文章"
+    url = "/posts/"
+  [[params.profileMode.buttons]]
+    name = "关于"
+    url = "/about/"
+
+[[menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "posts"
+  name = "文章"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 20
