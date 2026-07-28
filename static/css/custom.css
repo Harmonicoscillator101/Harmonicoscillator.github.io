@@ -1,1 +1,93 @@
-background: linear-gradient(to bottom, #e0eafc, #cfdef3) !important;
+/* 全局背景图片 */
+body {
+    background-image: url('/images/bg.jpg') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+/* 主内容区添加半透明白色背景，保证文字清晰可读 */
+.main {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 可选：让导航栏也稍微透明，与背景融合 */
+.header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+}
+/* ========== 深色模式修复 ========== */
+/* 针对 PaperMod 的暗色类 .dark （手动切换或系统自动） */
+.dark {
+  /* 关键：将卡片背景强制设为深色半透明，文字浅色 */
+  --card-bg: rgba(30, 30, 30, 0.85);
+  --text-color: #e0e0e0;
+  --link-color: #8ab4f8;
+  --header-bg: rgba(20, 20, 20, 0.85);
+}
+
+/* 将这些变量应用到主要区域 */
+.dark .main,
+.dark .post-entry,
+.dark .post-content,
+.dark article,
+.dark .page-header,
+.dark .archive-entry {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.dark .header,
+.dark .nav {
+  background-color: var(--header-bg) !important;
+}
+
+.dark a {
+  color: var(--link-color) !important;
+}
+
+/* 让背景图片在深色模式下叠加一层半透明黑色遮罩 */
+.dark body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 0.4 使背景变暗但不完全遮蔽 */
+  z-index: -1;
+  pointer-events: none; /* 让遮罩不阻挡点击 */
+}
+
+/* 如果 PaperMod 使用 data-theme 属性而不是 .dark，添加这个备用 */
+[data-theme="dark"] .main,
+[data-theme="dark"] .post-entry,
+[data-theme="dark"] .post-content,
+[data-theme="dark"] article {
+  background-color: rgba(30, 30, 30, 0.85) !important;
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .header {
+  background-color: rgba(20, 20, 20, 0.85) !important;
+}
+
+[data-theme="dark"] a {
+  color: #8ab4f8 !important;
+}
+
+[data-theme="dark"] body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  pointer-events: none;
+}
