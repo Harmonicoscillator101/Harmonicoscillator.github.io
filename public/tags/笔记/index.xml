@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>笔记 on Harmonicoscillator的个人网站</title>
+    <link>http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on Harmonicoscillator的个人网站</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 28 Jul 2026 20:34:48 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>近代物理笔记</title>
+      <link>http://localhost:1313/posts/modern-physics-note/</link>
+      <pubDate>Tue, 28 Jul 2026 20:34:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/modern-physics-note/</guid>
+      <description>&lt;h1 id=&#34;近代物理笔记&#34;&gt;近代物理笔记&lt;/h1&gt;
+&lt;p&gt;华中科技大学物理学院李霖老师的近代物理课堂PPT整理得到的期末复习笔记。虽然老师讲得很好，但是我没怎么听过课，最后复习突击了一下也满绩了（虽然大概率只是跟期末考跟往年题重复率很高有关），在这里把笔记上传上来吧。&lt;a href=&#34;http://localhost:1313/files/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86%E5%A4%8D%E4%B9%A0.pdf&#34;&gt;近代物理笔记&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

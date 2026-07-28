@@ -29,16 +29,28 @@
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-07-28T20:34:48+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2026-07-28T20:34:48+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/</loc>
     <lastmod>2026-07-28T20:34:48+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E8%BE%93%E8%BF%90%E7%90%86%E8%AE%BA/</loc>
     <lastmod>2026-07-28T20:34:48+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/modern-physics-note/</loc>
+    <lastmod>2026-07-28T20:34:48+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/my-first-post/</loc>
     <lastmod>2026-07-28T19:29:55+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
+    <lastmod>2026-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2026-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/archives/</loc>
     <lastmod>2026-07-28T00:00:00+00:00</lastmod>
   </url>
 </urlset>

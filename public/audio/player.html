@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .music-player {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .music-toggle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .music-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+
+  .player-panel {
+    display: none;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    padding: 12px 16px;
+    width: 280px;
+    position: relative;
+  }
+  .player-panel.show {
+    display: block;
+  }
+
+  .close-panel {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+  }
+
+  audio {
+    width: 100%;
+    height: 36px;
+    margin-top: 4px;
+  }
+
+  .loop-indicator {
+    font-size: 0.8rem;
+    color: #888;
+    margin-left: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="music-player">
+  <button class="music-toggle" id="musicToggle" title="音乐播放器">🎵</button>
+  <div class="player-panel" id="playerPanel">
+    <button class="close-panel" id="closePanel">✕</button>
+    <span style="font-size:0.9rem;color:#555;">🎧 正在播放：你的音乐</span>
+    <audio id="bgmAudio" loop>
+      <source src="/audio/bgm.mp3" type="audio/mpeg">
+      你的浏览器不支持音频播放。
+    </audio>
+    <span class="loop-indicator" id="loopIndicator">🔁 循环中</span>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById('musicToggle');
+  const panel = document.getElementById('playerPanel');
+  const close = document.getElementById('closePanel');
+  const audio = document.getElementById('bgmAudio');
+  const loopInd = document.getElementById('loopIndicator');
+
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    panel.classList.toggle('show');
+    if (audio.paused) {
+      audio.play().catch(function(err) {
+        console.log('播放需要用户交互', err);
+      });
+    }
+  });
+
+  close.addEventListener('click', function(e) {
+    e.stopPropagation();
+    panel.classList.remove('show');
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!panel.contains(e.target) && e.target !== toggle) {
+      panel.classList.remove('show');
+    }
+  });
+
+  loopInd.addEventListener('dblclick', function() {
+    audio.loop = !audio.loop;
+    loopInd.textContent = audio.loop ? '🔁 循环中' : '▶ 单次播放';
+  });
+
+  audio.addEventListener('play', function() {
+    loopInd.textContent = audio.loop ? '🔁 循环中' : '▶ 单次播放';
+  });
+</script>
+</body>
+</html>

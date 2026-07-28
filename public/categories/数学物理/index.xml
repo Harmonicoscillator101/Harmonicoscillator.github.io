@@ -18,5 +18,13 @@
 $$\partial_t f_a + \mathbf{v} \cdot \nabla f_a + \frac{e_a}{m_a}(\mathbf{E} + \mathbf{v} \times \mathbf{B}) \cdot \partial_{\mathbf{v}} f_a = \sum_b C(f_a, f_b)$$
 其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。&lt;a href=&#34;http://localhost:1313/files/7.21%EF%BC%9AMathematica%E8%AE%A1%E7%AE%97%E3%80%81Rosenbluth%E5%8A%BF%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A2%B0%E6%92%9E%E7%AE%97%E5%AD%90.pdf&#34;&gt;点击此处下载我的最新PPT&lt;/a&gt;&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>近代物理笔记</title>
+      <link>http://localhost:1313/posts/modern-physics-note/</link>
+      <pubDate>Tue, 28 Jul 2026 20:34:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/modern-physics-note/</guid>
+      <description>&lt;h1 id=&#34;近代物理笔记&#34;&gt;近代物理笔记&lt;/h1&gt;
+&lt;p&gt;华中科技大学物理学院李霖老师的近代物理课堂PPT整理得到的期末复习笔记。虽然老师讲得很好，但是我没怎么听过课，最后复习突击了一下也满绩了（虽然大概率只是跟期末考跟往年题重复率很高有关），在这里把笔记上传上来吧。&lt;a href=&#34;http://localhost:1313/files/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86%E5%A4%8D%E4%B9%A0.pdf&#34;&gt;近代物理笔记&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
