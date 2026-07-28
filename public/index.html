@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>我的个人网站</title>
+<title>Harmonicoscillator的个人网站</title>
 
 <meta name="description" content="">
 <meta name="author" content="">
@@ -67,13 +67,34 @@
     }
 
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
 
 </head>
 <body class="list" id="top">
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="我的个人网站 (Alt + H)">我的个人网站</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Harmonicoscillator的个人网站 (Alt + H)">Harmonicoscillator的个人网站</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -98,60 +119,51 @@
             </div>
         </div>
         <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
+<main class="main"><div class="profile">
+    <div class="profile_inner">
+        <img draggable="false" src="http://localhost:1313/images/mostima.jpg" alt="我的头像" title="我的头像"
+            height="150" width="150" />
         <h1>嗨，欢迎来到我的小站！</h1>
-    </header>
-    <div class="entry-content md-content">
-        
-        <p>这是一段介绍文字。</p>
-
-    </div>
-    <footer class="entry-footer">
-        <div class="social-icons" >
+        <span>我是来自华科物理学院的本科生，现在正在被学业折磨中。</span><div class="social-icons" >
 </div>
 
-    </footer>
-</article>
+        <div class="buttons">
+            <a class="button" href="/posts/" rel="noopener" title="文章">
+                <span class="button-inner">
+                    文章
+                </span>
+            </a>
+            <a class="button" href="/about/" rel="noopener" title="关于">
+                <span class="button-inner">
+                    关于
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">My Article About My Works
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>我当前的一些主要工作介绍 等离子体输运理论 等离子输运理论是等离子体动理学的一个部分，归根结底在于想办法用更高效的方法构建玻尔兹曼方程与模拟计算之间的桥梁。玻尔兹曼方程定义为： $$\partial_t f_a &#43; \mathbf{v} \cdot \nabla f_a &#43; \frac{e_a}{m_a}(\mathbf{E} &#43; \mathbf{v} \times \mathbf{B}) \cdot \partial_{\mathbf{v}} f_a = \sum_b C(f_a, f_b)$$ 其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。
-</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-07-28 20:34:48 +0800 CST'>July 28, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to My Article About My Works" href="http://localhost:1313/posts/my-article-about-my-works/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">My First Post
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>大家好！我是Harmonicoscillator。
-我很高兴能通过 Hugo 搭建自己的个人网站。
-</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-07-28 19:29:55 +0800 CST'>July 28, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to My First Post" href="http://localhost:1313/posts/my-first-post/"></a>
-</article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">我的个人网站</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Harmonicoscillator的个人网站</a></span> · 
 
     
     
