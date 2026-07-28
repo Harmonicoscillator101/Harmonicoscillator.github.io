@@ -6,15 +6,8 @@
     <description>Recent content on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jul 2026 21:27:37 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 20:34:48 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>关于我</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Tue, 28 Jul 2026 21:27:37 +0800</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;我目前没想好在这里放些什么，先这样吧&lt;/p&gt;</description>
-    </item>
     <item>
       <title>我当前正在进行的工作</title>
       <link>http://localhost:1313/posts/my-article-about-my-works/</link>
@@ -32,6 +25,13 @@ $$\partial_t f_a + \mathbf{v} \cdot \nabla f_a + \frac{e_a}{m_a}(\mathbf{E} + \m
       <guid>http://localhost:1313/posts/my-first-post/</guid>
       <description>&lt;p&gt;大家好！我是Harmonicoscillator。&lt;/p&gt;
 &lt;p&gt;我很高兴能通过 Hugo 搭建自己的个人网站。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于我</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;我目前没想好在这里放些什么，先这样吧&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

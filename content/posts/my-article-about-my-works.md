@@ -3,6 +3,8 @@ date: '2026-07-28T20:34:48+08:00'
 draft: false
 title: '我当前正在进行的工作'
 math: true
+tags: ["等离子体", "输运理论"]
+categories: ["数学物理"]
 ---
 # 等离子体输运理论
 
