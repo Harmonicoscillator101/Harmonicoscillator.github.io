@@ -1,7 +1,7 @@
-+++
-date = '2026-07-28T21:27:37+08:00'
-draft = false
-title = '关于我'
-+++
-
+---
+title: "关于我"
+date: 2026-07-28
+draft: false
+layout: "about"
+---
 我目前没想好在这里放些什么，先这样吧
