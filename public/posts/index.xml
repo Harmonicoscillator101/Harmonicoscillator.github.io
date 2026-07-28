@@ -6,8 +6,19 @@
     <description>Recent content in Posts on 我的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jul 2026 19:29:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 20:34:48 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Article About My Works</title>
+      <link>http://localhost:1313/posts/my-article-about-my-works/</link>
+      <pubDate>Tue, 28 Jul 2026 20:34:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/my-article-about-my-works/</guid>
+      <description>&lt;h1 id=&#34;我当前的一些主要工作介绍&#34;&gt;我当前的一些主要工作介绍&lt;/h1&gt;
+&lt;h2 id=&#34;等离子体输运理论&#34;&gt;等离子体输运理论&lt;/h2&gt;
+&lt;p&gt;等离子输运理论是等离子体动理学的一个部分，归根结底在于想办法用更高效的方法构建玻尔兹曼方程与模拟计算之间的桥梁。玻尔兹曼方程定义为：
+$$\partial_t f_a + \mathbf{v} \cdot \nabla f_a + \frac{e_a}{m_a}(\mathbf{E} + \mathbf{v} \times \mathbf{B}) \cdot \partial_{\mathbf{v}} f_a = \sum_b C(f_a, f_b)$$
+其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
