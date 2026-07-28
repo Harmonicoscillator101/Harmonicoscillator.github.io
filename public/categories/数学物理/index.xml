@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数学物理 on Harmonicoscillator的个人网站</title>
+    <link>http://localhost:1313/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86/</link>
+    <description>Recent content in 数学物理 on Harmonicoscillator的个人网站</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 28 Jul 2026 20:34:48 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我当前正在进行的工作</title>
+      <link>http://localhost:1313/posts/my-article-about-my-works/</link>
+      <pubDate>Tue, 28 Jul 2026 20:34:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/my-article-about-my-works/</guid>
+      <description>&lt;h1 id=&#34;等离子体输运理论&#34;&gt;等离子体输运理论&lt;/h1&gt;
+&lt;p&gt;等离子输运理论是等离子体动理学的一个部分，归根结底在于想办法用更高效的方法构建玻尔兹曼方程与模拟计算之间的桥梁。玻尔兹曼方程定义为：
+$$\partial_t f_a + \mathbf{v} \cdot \nabla f_a + \frac{e_a}{m_a}(\mathbf{E} + \mathbf{v} \times \mathbf{B}) \cdot \partial_{\mathbf{v}} f_a = \sum_b C(f_a, f_b)$$
+其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。&lt;a href=&#34;http://localhost:1313/files/7.21%EF%BC%9AMathematica%E8%AE%A1%E7%AE%97%E3%80%81Rosenbluth%E5%8A%BF%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A2%B0%E6%92%9E%E7%AE%97%E5%AD%90.pdf&#34;&gt;点击此处下载我的最新PPT&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

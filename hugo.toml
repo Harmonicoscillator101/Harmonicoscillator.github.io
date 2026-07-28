@@ -11,19 +11,24 @@ theme = "PaperMod"
 [params.profileMode]
   enabled = true
   title = "嗨，欢迎来到我的小站！"
-  subtitle = "我是来自华科物理学院的本科生，现在正在被学业折磨中。"
+subtitle = """
+  
+  📧 邮箱：wzykyle101@foxmail.com  
+  📱 手机：+86 13316203081 
+  💬 QQ：2630323748
+  """
   imageUrl = "/images/mostima.jpg"
   imageTitle = "我的头像"
   # 可以添加一些按钮
   [[params.profileMode.buttons]]
     name = "文章"
     url = "/posts/"
-  [[params.profileMode.buttons]]
-    name = "关于"
-    url = "/about/"
 [[params.profileMode.buttons]]
     name = "生活"
     url = "/life/"
+  [[params.profileMode.buttons]]
+    name = "关于"
+    url = "/about/"
 
 [[menu.main]]
   identifier = "home"

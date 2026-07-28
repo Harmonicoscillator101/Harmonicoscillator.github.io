@@ -6,8 +6,19 @@
     <description>Recent content on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jul 2026 20:34:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 22:55:07 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>薄墨的尽头</title>
+      <link>http://localhost:1313/life/my-life-post/</link>
+      <pubDate>Tue, 28 Jul 2026 22:55:07 +0800</pubDate>
+      <guid>http://localhost:1313/life/my-life-post/</guid>
+      <description>&lt;h1 id=&#34;十分对我胃口的末日公路作品&#34;&gt;十分对我胃口的末日公路作品&lt;/h1&gt;
+&lt;p&gt;主要是作者对废墟的画工吸引了我，我本人十分钟爱人类末世之后的废土样貌。然后才是本作的故事走向和人物本身。大概讲了一个被叫做“永恒之子”的人造人在怪病席卷世界、怪物降临后寻找人类幸存者的故事。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;漫画前三卷&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/ruins.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;因为是公路片，在主线之外作者花了很大篇幅描写单元剧，从一个永恒造物的视角去审视短命的人类如何面对真正的死亡。但是我在担心，人类作者可能根本没办法理解什么是永恒，因为无限是某种超越性的东西&amp;hellip;实际上我并不看好作者能够在永恒方面有更大胆更激进的想法，但是我还是赞赏由不死不灭的主角和几乎完全死亡的世界之间产生的张力（实际上，作者更像是在刻意制造神秘的悬念吊观众胃口）。&lt;/p&gt;
+&lt;p&gt;第四卷已经发售了，但是我的预购还没有发货，只能等待&amp;hellip;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>我当前正在进行的工作</title>
       <link>http://localhost:1313/posts/my-article-about-my-works/</link>
@@ -31,7 +42,9 @@ $$\partial_t f_a + \mathbf{v} \cdot \nabla f_a + \frac{e_a}{m_a}(\mathbf{E} + \m
       <link>http://localhost:1313/about/</link>
       <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;我目前没想好在这里放些什么，先这样吧&lt;/p&gt;</description>
+      <description>&lt;p&gt;一个因为期末考考崩而摆烂中的苦逼华科大学牲&lt;/p&gt;
+&lt;p&gt;喜欢看番和打游戏，偶尔打羽毛球。剩下的时间用来睡觉了。&lt;/p&gt;
+&lt;p&gt;未来可能会开发一些小项目或者小游戏，但是现在先把学业弄完吧&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Harmonicoscillator的个人网站</title>
+    <title>文章 on Harmonicoscillator的个人网站</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Harmonicoscillator的个人网站</description>
+    <description>Recent content in 文章 on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 28 Jul 2026 20:34:48 +0800</lastBuildDate>
