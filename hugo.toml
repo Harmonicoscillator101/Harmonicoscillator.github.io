@@ -1,0 +1,8 @@
+baseURL = "https://harmonicoscillator101.github.io/"
+locale = "zh-cn"
+title = "我的个人网站"
+theme = "PaperMod"
+
+[params.homeInfoParams]
+  title = "嗨，欢迎来到我的小站！"
+  Content = "这是一段介绍文字。"
