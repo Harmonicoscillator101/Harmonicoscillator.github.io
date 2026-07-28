@@ -27,7 +27,7 @@
       <description>&lt;h1 id=&#34;等离子体输运理论&#34;&gt;等离子体输运理论&lt;/h1&gt;
 &lt;p&gt;等离子输运理论是等离子体动理学的一个部分，归根结底在于想办法用更高效的方法构建玻尔兹曼方程与模拟计算之间的桥梁。玻尔兹曼方程定义为：
 $$\partial_t f_a + \mathbf{v} \cdot \nabla f_a + \frac{e_a}{m_a}(\mathbf{E} + \mathbf{v} \times \mathbf{B}) \cdot \partial_{\mathbf{v}} f_a = \sum_b C(f_a, f_b)$$
-其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。&lt;a href=&#34;http://localhost:1313/files/7.21%EF%BC%9AMathematica%E8%AE%A1%E7%AE%97%E3%80%81Rosenbluth%E5%8A%BF%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A2%B0%E6%92%9E%E7%AE%97%E5%AD%90.pdf&#34;&gt;点击此处下载我的最新PPT&lt;/a&gt;&lt;/p&gt;</description>
+其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。现在我主要精力在于关注Jeong-Young Ji and Eric D. Held在&lt;a href=&#34;http://localhost:1313/files/jijy06.pdf&#34;&gt;2006年发表在POP上的工作&lt;/a&gt;并学习其推导高阶矩的一般方法，如我的&lt;a href=&#34;http://localhost:1313/files/5.31%EF%BC%9AJi%E8%AE%BA%E6%96%87%E5%A4%8D%E6%8E%A8.pdf&#34;&gt;文献阅读工作1&lt;/a&gt;和&lt;a href=&#34;http://localhost:1313/files/6.7%EF%BC%9AJi%E8%AE%BA%E6%96%87%E5%A4%8D%E6%8E%A82.pdf&#34;&gt;文献阅读工作2&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>近代物理笔记</title>
