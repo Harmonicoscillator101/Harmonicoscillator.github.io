@@ -29,6 +29,7 @@ summaryLength = 140
 
 [params.assets]
   custom_css = ["css/custom.css"]
+  favicon = "/images/mostima1.jpg" 
 
 [params.fuseOpts]
   isCaseSensitive = false
