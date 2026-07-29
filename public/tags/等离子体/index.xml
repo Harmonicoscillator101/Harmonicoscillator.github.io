@@ -31,6 +31,18 @@ $$\dot{q}_i=\frac{\partial H(q,p)}{\partial p_i},\quad \dot{p}_i=-\frac{\partial
 &lt;/p&gt;</description>
     </item>
     <item>
+      <title>等离子体输运理论(2)</title>
+      <link>http://localhost:1313/posts/transform-of-plasma2/</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/transform-of-plasma2/</guid>
+      <description>&lt;h1 id=&#34;单个粒子的漂移运动&#34;&gt;单个粒子的漂移运动&lt;/h1&gt;
+&lt;h2 id=&#34;frenet坐标系&#34;&gt;Frenet坐标系&lt;/h2&gt;
+&lt;p&gt;这同样是非常基础但是重要的一节。区别于固定的笛卡尔坐标系引入了一种动态坐标系，从而更简便地描述电磁学的场线等。&lt;/p&gt;
+&lt;p&gt;对于三维空间的任意一条光滑的曲线，取其上任意一点，可以构造三个相互垂直的单位向量：&lt;/p&gt;
+&lt;p&gt;1.切向量 $\bm{b}(\bm{r})$。其方向指向曲线在该点的前进方向,可以由原点到该点的位置矢量 $\bm{r}(s)$ 对自然参量 $s$（也就是弧长）的一阶导数来表示：
+&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>我当前正在进行的工作</title>
       <link>http://localhost:1313/posts/my-article-about-my-works/</link>
       <pubDate>Tue, 28 Jul 2026 20:34:48 +0800</pubDate>

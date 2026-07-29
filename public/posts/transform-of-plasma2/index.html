@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>等离子体输运理论(2) | Harmonicoscillator的个人网站</title>
+<meta name="keywords" content="等离子体, 输运理论, 笔记">
+<meta name="description" content="局域坐标系
+这同样是非常基础但是重要的一节。区别于固定的笛卡尔坐标系引入了一种动态坐标系，从而更简便地描述电磁学的场线等。
+Frenet坐标系
+对于三维空间的任意一条光滑的曲线，取其上任意一点，可以构造三个相互垂直的单位向量：
+1.切向量 $\boldsymbol{b}(\boldsymbol{r})$。其方向指向曲线在该点的前进方向,可以由原点到该点的位置矢量 $\boldsymbol{r}(s)$ 对自然参量 $s$（也就是弧长）的一阶导数来表示：
+">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/transform-of-plasma2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/transform-of-plasma2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="stylesheet" href="/css/custom.css">
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [
+      ['$', '$'],
+      ['\\(', '\\)']
+    ],
+    displayMath: [
+      ['$$', '$$'],
+      ['\\[', '\\]']
+    ],
+    processEscapes: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {
+      '[+]': ['mathtools', 'bm']
+    }
+  },
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Harmonicoscillator (Alt + H)">
+                <img src="http://localhost:1313/images/mostima.jpg" alt="" aria-label="logo"
+                    height="35">Harmonicoscillator</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/life/" title="生活">
+                    <span>生活</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="时间轴">
+                    <span>时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">文章</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      等离子体输运理论(2)
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-07-29 00:00:00 +0000 UTC'>July 29, 2026</span>&nbsp;·&nbsp;<span>7 min</span>
+
+</div>
+  </header> <details class="toc"  open>
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Table of Contents</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#%e5%b1%80%e5%9f%9f%e5%9d%90%e6%a0%87%e7%b3%bb" aria-label="局域坐标系">局域坐标系</a><ul>
+                    
+            <li>
+                <a href="#frenet%e5%9d%90%e6%a0%87%e7%b3%bb" aria-label="Frenet坐标系">Frenet坐标系</a></li>
+            <li>
+                <a href="#frenet%e5%85%ac%e5%bc%8f" aria-label="Frenet公式">Frenet公式</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e5%8d%95%e4%b8%aa%e5%b8%a6%e7%94%b5%e7%b2%92%e5%ad%90%e5%9c%a8%e7%94%b5%e7%a3%81%e5%9c%ba%e7%9a%84%e8%bf%90%e5%8a%a8" aria-label="单个带电粒子在电磁场的运动">单个带电粒子在电磁场的运动</a><ul>
+                    
+            <li>
+                <a href="#%e7%b2%92%e5%ad%90%e5%9c%a8%e4%b8%8d%e5%9d%87%e5%8c%80%e5%ae%9a%e6%80%81%e7%94%b5%e7%a3%81%e5%9c%ba%e4%b8%ad%e8%bf%90%e5%8a%a8" aria-label="粒子在不均匀定态电磁场中运动">粒子在不均匀定态电磁场中运动</a></li>
+            <li>
+                <a href="#%e7%ae%80%e5%8d%95%e7%9a%84%e5%ae%9e%e4%be%8b%e5%8d%95%e4%b8%aa%e5%b8%a6%e7%94%b5%e7%b2%92%e5%ad%90%e5%9c%a8%e5%9d%87%e5%8c%80%e7%a3%81%e5%9c%ba%e4%b8%ad%e7%9a%84%e8%bf%90%e5%8a%a8" aria-label="简单的实例：单个带电粒子在均匀磁场中的运动">简单的实例：单个带电粒子在均匀磁场中的运动</a>
+            </li>
+        </ul>
+        </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><h2 id="局域坐标系">局域坐标系<a hidden class="anchor" aria-hidden="true" href="#局域坐标系">#</a></h2>
+<p>这同样是非常基础但是重要的一节。区别于固定的笛卡尔坐标系引入了一种动态坐标系，从而更简便地描述电磁学的场线等。</p>
+<h3 id="frenet坐标系">Frenet坐标系<a hidden class="anchor" aria-hidden="true" href="#frenet坐标系">#</a></h3>
+<p>对于三维空间的任意一条光滑的曲线，取其上任意一点，可以构造三个相互垂直的单位向量：</p>
+<p>1.切向量 $\boldsymbol{b}(\boldsymbol{r})$。其方向指向曲线在该点的前进方向,可以由原点到该点的位置矢量 $\boldsymbol{r}(s)$ 对自然参量 $s$（也就是弧长）的一阶导数来表示：
+</p>
+$$\frac{\mathrm{d}\boldsymbol{r}(s)}{\mathrm{d}s}=\boldsymbol{b}(\boldsymbol{r}(s))\tag{1}$$<p>2.法向量 $\boldsymbol{N}(\boldsymbol{r})$。其方向指向曲线这一小段圆弧的圆心，与切向量垂直。定义曲率矢量，用以描述切向量的方向变化程度：
+</p>
+$$\boldsymbol{k}(s)=\frac{\mathrm{d}\boldsymbol{b}(\boldsymbol{r})}{\mathrm{d}s}=\frac{\mathrm{d}^2\boldsymbol{r}(s)}{\mathrm{d}s^2}\tag{2}$$<p>
+则曲率矢量的长度 $k$、曲率半径 $\rho$ 的关系为：
+</p>
+$$k=\frac{1}{\rho}=\left|\frac{\mathrm{d}\boldsymbol{b}(\boldsymbol{r})}{\mathrm{d}s}\right|\tag{3}$$<p>
+那么单位法向量就可以写为：
+</p>
+$$\boldsymbol{N}(\boldsymbol{r})=\frac{1}{k}\boldsymbol{k}(s)=\rho\boldsymbol{k}(s)\tag{4}$$<p>3.副法向量 $\boldsymbol{\beta }(\boldsymbol{r})$。其定义为上述两个单位向量的叉积：
+</p>
+$$\boldsymbol{\beta}(\boldsymbol{r})=\boldsymbol{b}(\boldsymbol{r})\times \boldsymbol{N}(\boldsymbol{r})\tag{5}$$<p>
+我们可以定义挠率 $\kappa$ 来表示曲线离开其所在平面的度量，反应副法线方向变化的速率，其矢量形式定义为：
+</p>
+$$\boldsymbol{\kappa}=\frac{\mathrm{d}\boldsymbol{\beta}(\boldsymbol{r})}{\mathrm{d}s}=\frac{1}{\tau}\boldsymbol{N}(\boldsymbol{r})\tag{6}$$<p>
+其中 $\tau$ 为挠率半径。</p>
+<h3 id="frenet公式">Frenet公式<a hidden class="anchor" aria-hidden="true" href="#frenet公式">#</a></h3>
+<p>在此之前，先考虑一个任意的场量 $F(\boldsymbol{r}(s))$，对其求自然参量的一阶导数可以得到：
+</p>
+$$\frac{\mathrm{d}F(\boldsymbol{r})}{\mathrm{d}s}=\frac{\mathrm{d}\boldsymbol{r}(s)}{\mathrm{d}s}\cdot\frac{\partial F(\boldsymbol{r})}{\partial\boldsymbol{r}}=[\boldsymbol{b}(\boldsymbol{r})\cdot \nabla ]F(\boldsymbol{r})\tag{7}$$<p>
+那就好办了，前面类似的定义都可以重写，比如式(33)可以写为：
+</p>
+$$\frac{1}{\rho}=|(\boldsymbol{b}\cdot\nabla)\boldsymbol{b}|\tag{8}$$<p>
+而挠率半径可以由下式定义：
+</p>
+$$\kappa=\frac{1}{\tau}=\boldsymbol{N}\cdot[(\boldsymbol{b}\cdot \nabla)\boldsymbol{\beta}]\tag{9}$$<p>
+因此我们可以写出Frenet公式：
+</p>
+$$
+\begin{split}
+\frac{d \boldsymbol{b} \left( s \right)}{ds}= \left( \boldsymbol{b} \cdot \nabla \right) \boldsymbol{b}= \frac{1}{ \rho}\boldsymbol{N}, \\
+\frac{d \boldsymbol{N} \left( s \right)}{ds}= \left( \boldsymbol{b} \cdot \nabla \right) \boldsymbol{N}=- \frac{1}{ \tau} \boldsymbol{\beta}- \frac{1}{ \rho}\boldsymbol{b}, \\
+\frac{d \boldsymbol{ \beta} \left( s \right)}{ds}= \left( \boldsymbol{b} \cdot \nabla \right) \boldsymbol\beta= \frac{1}{ \tau}\boldsymbol{N}.
+\end{split}
+\tag{10}
+$$<p>
+需要指出，作者这里给出的Frenet公式与常见的公式存在正负号的一些差异，这是由于定义的问题,不影响物理图像。</p>
+<p>对于一个基本的、存在梯度的磁场，$\boldsymbol{b}(\boldsymbol{r})$ 的方向是确定的，但是另外两个矢量则会在与其垂直的平面上方向不定。这时定义新的两个矢量：
+</p>
+$$\boldsymbol{N}'(\boldsymbol{r})=\frac{\boldsymbol{b}\times \nabla B(\boldsymbol{r})}{|\nabla B(\boldsymbol{r})|}\tag{11}$$<p>
+</p>
+$$\boldsymbol{\beta}'(\boldsymbol{r})=\boldsymbol{b}\times \boldsymbol{N}'\tag{12}$$<p>
+这样由磁场的几何结构再次构造了一个局域坐标系。</p>
+<p>但是，对于均匀场或者场处处平行于 $\boldsymbol{b}$ 时，此时无法再通过式(41)与(42)构造局域坐标系，不如直接采取绝对参考系来的方便。</p>
+<h2 id="单个带电粒子在电磁场的运动">单个带电粒子在电磁场的运动<a hidden class="anchor" aria-hidden="true" href="#单个带电粒子在电磁场的运动">#</a></h2>
+<h3 id="粒子在不均匀定态电磁场中运动">粒子在不均匀定态电磁场中运动<a hidden class="anchor" aria-hidden="true" href="#粒子在不均匀定态电磁场中运动">#</a></h3>
+<p>带电量为 $e$ 的粒子在电磁场中受 Lorentz 力为：
+</p>
+$$\boldsymbol{F} = e \left( \boldsymbol{E} + \boldsymbol{v} \times \boldsymbol{B} \right)\tag{13}$$<p>引入矢势 $\boldsymbol{A}(\boldsymbol{q}, t)$ 和标势 $\varphi(\boldsymbol{q}, t)$：
+</p>
+$$
+\begin{aligned}
+\boldsymbol{B} &= \nabla \times \boldsymbol{A} \\
+\boldsymbol{E} &= - \nabla \varphi - \frac{\partial \boldsymbol{A}}{\partial t}
+\end{aligned}
+\tag{14}
+$$<p>由于场是定态的，所以 $\frac{\partial \boldsymbol{A}}{\partial t} = 0$。则有：
+</p>
+$$
+\begin{aligned}
+\boldsymbol{F} &= e \left[ - \nabla \varphi + \boldsymbol{v} \times (\nabla \times \boldsymbol{A}) \right] \\
+       &= e \left[ - \nabla \varphi + \nabla (\boldsymbol{v} \cdot \boldsymbol{A}) - (\boldsymbol{v} \cdot \nabla) \boldsymbol{A} \right] \\
+       &= - \nabla \left( e \varphi - e \boldsymbol{A} \cdot \boldsymbol{v} \right)
+\end{aligned}
+\tag{15}
+$$<p>因此可定义广义势能：
+</p>
+$$U(q, \dot{q}) = e \varphi - e \boldsymbol{A} \cdot \boldsymbol{v}\tag{16}$$<p>因此我们有推广的 Lagrange 量：
+</p>
+$$L = T - U = \frac{1}{2} m \boldsymbol{v}^2 - (e \varphi - e \boldsymbol{A} \cdot \boldsymbol{v})\tag{17}$$<p>广义动量：
+</p>
+$$p_x = \frac{\partial L}{\partial v_x} = m v_x + e A_x\tag{18}$$<p>Hamilton 量为：
+</p>
+$$H = \boldsymbol{p} \cdot \boldsymbol{v} - L = \frac{1}{2m} \left( \boldsymbol{p} - e \boldsymbol{A} \right)^2 + e \varphi\tag{19}$$<p>
+其中 $\boldsymbol{A} = \boldsymbol{A}(\boldsymbol{q})$，$\varphi = \varphi(\boldsymbol{q})$。这样我们可以给出 Hamilton 运动方程与 Poisson 括号表示：
+</p>
+$$
+\begin{cases}
+\dot{q}_i = \frac{\partial H}{\partial p_i} = \frac{1}{m} \left( p_i - e A_i \right) \\
+\dot{p}_i = - \frac{\partial H}{\partial x_i} = \frac{e}{m} \left( p_j - e A_j \right) \frac{\partial A_j}{\partial x_i} - e \frac{\partial \varphi}{\partial x_i}
+\end{cases}
+\tag{20}
+$$$$\{ q_i, q_j \} = 0, \quad \{ p_i, p_j \} = 0, \quad \{ q_i, p_j \} = \delta_{ij}\tag{21}$$<p>很标准，但是我们发现这里的正则变量并不方便。原因在于动量 $\boldsymbol{p}$ 并不具备直观的物理意义。当它转换为机械动量 $\boldsymbol{\Pi} = m\boldsymbol{v}$ 才是直观的，那么它可以被如下变换：
+</p>
+$$\boldsymbol{\Pi} = m\boldsymbol{v} = \boldsymbol{p} - e\boldsymbol{A}\tag{22}$$<p>所以我们可以作这样的变换：$(q,p) \rightarrow (q,v)$ 然而这并不是正则变换。比如：
+</p>
+$$\{q_1, v_1\} = \sum_{k=1}^3 \left( \frac{\partial q_1}{\partial q_k} \frac{\partial v_1}{\partial p_k} - \frac{\partial q_1}{\partial p_k} \frac{\partial v_1}{\partial q_k} \right) = \frac{1}{m}\tag{23}$$<p>这并不等于简单的0或1。所以我们要应用赝正则变换的处理方法，依次计算Lie括号、Jacobi行列式、新变量的Hamilton函数以及运动方程：
+</p>
+$$\{q_i, q_j\} = 0, \quad \{q_i, v_j\} = \frac{1}{m}\delta_{ij}, \quad \{v_i, v_j\} = \frac{e}{m^2}\varepsilon_{ijk}B_k\tag{24}$$<p>
+</p>
+$$J = m^3\tag{25}$$<p>
+</p>
+$$H = \frac{1}{2}m\boldsymbol{v}^2 + e\varphi\tag{26}$$<p>
+</p>
+$$\dot{\boldsymbol{q}} = \boldsymbol{v}\tag{27}$$$$\dot{\boldsymbol{v}} = \frac{e}{m}(\boldsymbol{v} \times \boldsymbol{B}) + \frac{e}{m}\boldsymbol{E} \Rightarrow \dot{v}_i = \frac{e}{m}\varepsilon_{ijk}v_jB_k - \frac{e}{m}\frac{\partial \varphi}{\partial x_i}\tag{28}$$<p>
+很有意思的一点是，对能量 $H$ 无贡献的磁场 $\boldsymbol{B}$ 可以进入运动方程。这是由于计算赝正则变换的Lie括号导致的：
+</p>
+$$
+\begin{aligned}
+\dot{v}_i &= \{v_i, H\} = m v_j\{v_i, v_j\} + e\frac{\partial \varphi}{\partial x_j}\{v_i, q_j\} \\
+&= \frac{e}{m}\varepsilon_{ijk}v_jB_k - \frac{e}{m}\frac{\partial \varphi}{\partial x_i}
+\end{aligned}
+\tag{29}
+$$<p>由于 Lorentz 力只作用于垂直磁场方向的分量 $v_\perp$，将速度写成平行和垂直于磁场 $\boldsymbol{B}$ 的分量 $v_\parallel$ 与 $v_\perp$，因此可推导出两个分量的运动方程。所以这里可以运用局域坐标系的方法或采用以 $\boldsymbol{r}$ 点处的 Frenet 坐标系来求其分量：设 $t$ 时刻粒子以速度 $\boldsymbol{v}$ 通过点 $\boldsymbol{r} = \boldsymbol{q}$，速度可以分解为平行于和垂直于 $\boldsymbol{B}$ 的两个分量（$\boldsymbol{r}$ 处磁场线的 Frenet 坐标系的基础单位向量）：
+</p>
+$$\boldsymbol{v} = v_{\parallel} \boldsymbol{b} + v_{\perp} \boldsymbol{n}_1\tag{30}$$<p>
+选择一个单位矢量 $\boldsymbol{n}_1$ 沿着 $v_\perp$ 方向，第二个单位向量 $\boldsymbol{n}_2$，为 $\boldsymbol{n}_2$ 和 $\boldsymbol{b}$ 张成平面的法向单位向量，则有 $\boldsymbol{n}_1 \times \boldsymbol{n}_2 = \boldsymbol{b}$，将其叫作运动局域坐标系。</p>
+<p>不妨回顾之前的 Frenet 坐标系。$\boldsymbol{N}(\boldsymbol{r})$ 指向场线 $\boldsymbol{\beta}(\boldsymbol{r})$（此处考虑 $\boldsymbol{B}(\boldsymbol{r})$）的曲线切向，$\boldsymbol{N}(\boldsymbol{r})$ 为曲线弧内侧的法向量，$\boldsymbol{\beta}(\boldsymbol{r})$ 为上述两坐标系向量张成平面的法向量。</p>
+<p>为什么要引入局域参考系？因为 Frenet 系是描述磁场线几何，而运动坐标系是描述粒子运动的！在此处，两个坐标系共用 $\boldsymbol{b}(\boldsymbol{r})$，那么剩下两个向量的变换用一个简单的旋转矩阵描述：</p>
+$$
+\begin{aligned}
+\begin{pmatrix}
+\boldsymbol n_1\\
+\boldsymbol n_2
+\end{pmatrix}
+&=
+\begin{pmatrix}
+-\sin\theta&-\cos\theta\\
+\cos\theta&-\sin\theta
+\end{pmatrix}
+\begin{pmatrix}
+\boldsymbol N\\
+\boldsymbol\beta
+\end{pmatrix}
+\end{aligned}
+$$<p>$\theta$ 定义为 $\boldsymbol{n}_2$ 与 $\boldsymbol{N}$ 之间的夹角（它比普通的旋转矩阵多了一个 $\frac{\pi}{2}$），我们认为作者这样定义略有麻烦，但物理直观是一样的）</p>
+<p>以及
+</p>
+$$\frac{\partial \boldsymbol{n}_1}{\partial \theta} = - \boldsymbol{n}_2, \quad \frac{\partial \boldsymbol{n}_2}{\partial \theta} = \boldsymbol{n}_1\tag{32}$$<p>
+这样有用的关系。</p>
+<p>又因为
+</p>
+$$\boldsymbol{v} = v_{\parallel} \boldsymbol{b} + v_{\perp} \boldsymbol{n}_1\tag{33}$$<p>我们可以从 4 个变量来作分析，它们分别是 $\boldsymbol{q}$, $v_{\parallel}$, $v_{\perp}$ 和 $\theta$。</p>
+<p>其中 $\theta$ 为回旋相角，而 $v_{\perp}$ 是非负的，$v_{\parallel}$ 可正可负。这样，由 $(\boldsymbol{q}, \boldsymbol{v}) \rightarrow (\boldsymbol{q}, v_{\parallel}, v_{\perp}, \theta)$ 的变换可以通过赝正则变换来处理。这样就有七个 Lie 括号，虽然有点麻烦，但都从基本的法则出发就可以得到。</p>
+<p>定义：
+</p>
+$$\boldsymbol{q} = \boldsymbol{q}, \quad \boldsymbol{v} = v_{\parallel} \boldsymbol{b} + v_{\perp} \boldsymbol{n}_1\tag{34}$$<p>
+其中 $\boldsymbol{b} = \boldsymbol{b}(\boldsymbol{q})$, $\boldsymbol{n}_1 = \boldsymbol{n}_1(\boldsymbol{q}, \theta)$</p>
+<p>Lie 括号：
+</p>
+$$\{q_i, q_j\} = 0, \quad \{\boldsymbol{q}, v_{\parallel}\} = \frac{1}{m} \boldsymbol{b}, \quad \{\boldsymbol{q}, v_{\perp}\} = \frac{1}{m} \boldsymbol{n}_1\tag{35}$$$$\{\boldsymbol{q}, \theta\} = -\frac{1}{mv_{\perp}} \boldsymbol{n}_2, \quad \{v_{\parallel}, v_{\perp}\} = \frac{1}{m} \boldsymbol{n}_2 \cdot \boldsymbol{D},\tag{36}$$$$\{v_{\parallel}, \theta\} = \frac{1}{mv_{\perp}} \boldsymbol{n}_1 \cdot \boldsymbol{D}, \quad \{v_{\perp}, \theta\} = -\frac{eB}{m^2 v_{\perp}} - \frac{1}{mv_{\perp}} \boldsymbol{b} \cdot \boldsymbol{D}\tag{37}$$<p>
+其中 $\boldsymbol{D} = v_{\parallel}(\nabla \times \boldsymbol{b}) + v_{\perp}(\nabla \times \boldsymbol{n}_1)$</p>
+<p>Hamilton 函数
+</p>
+$$H = \frac{1}{2} m (v_{\perp}^2 + v_{\parallel}^2) + e \varphi (\boldsymbol{q})\tag{38}$$<p>运动方程
+</p>
+$$\dot{\boldsymbol{q}} = v_{\perp} \boldsymbol{n}_1 + v_{\parallel} \boldsymbol{b},\tag{39}$$$$\dot{v}_{\parallel} = v_{\perp} \boldsymbol{n}_2 \cdot \boldsymbol{D} + \frac{e}{m} \boldsymbol{b} \cdot \boldsymbol{E},\tag{40}$$$$\dot{v}_{\perp} = -v_{\perp} \boldsymbol{n}_2 \cdot \boldsymbol{D} + \frac{e}{m} \boldsymbol{n}_1 \cdot \boldsymbol{E},\tag{41}$$$$\dot{\theta} = \frac{eB}{m} + \boldsymbol{b} \cdot \boldsymbol{D} - \frac{v_{\parallel}}{v_{\perp}} \boldsymbol{n}_1 \cdot \boldsymbol{D} - \frac{e}{mv_{\perp}} \boldsymbol{n}_2 \cdot \boldsymbol{E}\tag{42}$$<p>这三组变量 $(\boldsymbol{p},\boldsymbol{q}) \Leftrightarrow (\boldsymbol{q},\boldsymbol{v}) \Leftrightarrow (\boldsymbol{q},v_{\parallel},v_{\perp},\theta)$ 被作者称为粒子变量，因其均含有位置矢量 $\boldsymbol{q}$。（笔者认为，$(\boldsymbol{q},\boldsymbol{p})$ 与 $(\boldsymbol{q},\boldsymbol{v})$ 之间的变换最为重要）</p>
+<h3 id="简单的实例单个带电粒子在均匀磁场中的运动">简单的实例：单个带电粒子在均匀磁场中的运动<a hidden class="anchor" aria-hidden="true" href="#简单的实例单个带电粒子在均匀磁场中的运动">#</a></h3>
+<p>均匀电场、无磁场的情况平凡，不详述。
+对于 $\boldsymbol{E}=0$，均匀磁场的条件下，广义动量 $\boldsymbol{p}$ 是恒定的，而 $\boldsymbol{v}$ 与 $\boldsymbol{q}$ 不再依赖。它简化为
+</p>
+$$\boldsymbol{v} = v_{\parallel} \boldsymbol{b} + v_{\perp} \boldsymbol{n}_1(\theta)\tag{43}$$<p>
+所以运动方程简化为：
+</p>
+$$\dot{\boldsymbol{q}} = v_{\parallel} \boldsymbol{b} + v_{\perp} \boldsymbol{n}_1, \quad \dot{v}_{\parallel} = 0, \quad \dot{v}_{\perp} = 0, \quad \dot{\theta} = \omega\tag{44}$$<p>
+其中 $\omega$ 为 Larmor 频率，$\omega = \frac{eB}{m}$。$\omega$ 的正负取决于 $e$。</p>
+<p>相角 $\theta$ 随时间变化：
+</p>
+$$\theta = \theta_0 + \omega t\tag{45}$$<p>
+将其代入位置矢量的方程，平行方向是简单的
+</p>
+$$q_{\parallel}(t) = q_{\parallel 0} + v_{\parallel} t\tag{46}$$<p>
+但对垂直分量，略微复杂。</p>
+$$\boldsymbol{q}_{\perp} = \int v_{\perp} \boldsymbol{n}_1 dt = v_{\perp} \int \boldsymbol{n}_1 dt\tag{47}$$<p>
+又 $\theta = \theta_0 + \omega t$，则 $dt = \frac{d\theta}{\omega}$，且 $\frac{\partial \boldsymbol{n}_1}{\partial \theta} = -\boldsymbol{n}_2$</p>
+$$\boldsymbol{q}_{\perp} = \frac{v_{\perp}}{\omega} \int \boldsymbol{n}_1 d\theta = \frac{v_{\perp}}{\omega} (\boldsymbol{n}_2(\theta) - \boldsymbol{n}_2(\theta_0)) + \boldsymbol{q}_{\perp 0}\tag{48}$$<p>
+可见 $\boldsymbol{q}_{\perp}(t)$ 是周期函数，因此可知道回旋半径为 (Larmor 半径)
+</p>
+$$\rho_L = \frac{v_{\perp}}{|\omega|}\tag{49}$$<p>
+回旋中心的位矢为 $\boldsymbol{Y}$
+</p>
+$$\boldsymbol{Y} = \boldsymbol{q}_0 - \frac{\boldsymbol{v}_{\perp}}{\omega}\boldsymbol{n}_2(\boldsymbol{q}_0,\theta_0)\tag{50}$$<p>
+只与粒子初态位置与速度有关，称为粒子导向中心。</p>
+<p>我们可以用程序简单模拟这个模型。沿Z轴的均匀磁场 $B_z=1T$，粒子初速度为 $\boldsymbol{v}=(1\times 10^6;0.5\times 10^6;0.2\times 10^6)$,无电场，得到以下的回旋运动：</p>
+<p><img alt="单个电子在均匀磁场中的回旋运动" loading="lazy" src="/images/%E5%8D%95%E4%B8%AA%E7%94%B5%E5%AD%90%E5%9C%A8%E5%9D%87%E5%8C%80%E7%A3%81%E5%9C%BA%E4%B8%AD%E7%9A%84%E5%9B%9E%E6%97%8B%E8%BF%90%E5%8A%A8.jpg"></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/">等离子体</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%BE%93%E8%BF%90%E7%90%86%E8%AE%BA/">输运理论</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Harmonicoscillator的个人网站</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
