@@ -19,14 +19,6 @@ summaryLength = 140
   TocOpen = true
   comments = true
 
-# config.toml示例
-[params.comments]
-    enable = true
-    utterances = true
-    utterancesRepo = "Harmonicoscillator101/harmonicoscillator101.github.io"  # 你的评论仓库
-    utterancesIssueTerm = "pathname"      # 映射方式
-    utterancesTheme = "github-light"      # 主题
-
 [params.label]
     text = "Harmonicoscillator"
     icon = "/images/mostima.jpg"
