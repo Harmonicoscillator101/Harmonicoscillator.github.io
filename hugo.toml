@@ -43,7 +43,10 @@ summaryLength = 140
 
 [params.profileMode]
   enabled = true
-  title = "嗨，欢迎来到我的小站！"
+  title = "初次见面，我是Harmonicoscillator"
+  subtitle = """
+  你可以翻阅我平时的数学物理学习笔记和一些碎碎念帖子
+  """
   imageUrl = "/images/mostima.jpg"
   imageTitle = "我的头像"
   [[params.profileMode.buttons]]
