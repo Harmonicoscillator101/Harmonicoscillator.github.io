@@ -1,0 +1,10 @@
+{{ if site.Params.utterances.repo }}
+<script src="https://utteranc.es/client.js"
+        repo="{{ site.Params.utterances.repo }}"
+        issue-term="{{ site.Params.utterances.issueTerm }}"
+        label="{{ site.Params.utterances.label }}"
+        theme="{{ site.Params.utterances.theme }}"
+        crossorigin="anonymous"
+        async>
+</script>
+{{ end }}
