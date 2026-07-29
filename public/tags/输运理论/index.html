@@ -94,7 +94,9 @@
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Harmonicoscillator的个人网站 (Alt + H)">Harmonicoscillator的个人网站</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Harmonicoscillator (Alt + H)">
+                <img src="http://localhost:1313/images/mostima.jpg" alt="" aria-label="logo"
+                    height="35">Harmonicoscillator</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -153,7 +155,18 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header">
+<header class="page-header"><nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/tags/">Tags</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
   <h1>
     输运理论
   </h1>
@@ -165,12 +178,12 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>等离子体输运理论 等离子输运理论是等离子体动理学的一个部分，归根结底在于想办法用更高效的方法构建玻尔兹曼方程与模拟计算之间的桥梁。玻尔兹曼方程定义为： $$\partial_t f_a &#43; \mathbf{v} \cdot \nabla f_a &#43; \frac{e_a}{m_a}(\mathbf{E} &#43; \mathbf{v} \times \mathbf{B}) \cdot \partial_{\mathbf{v}} f_a = \sum_b C(f_a, f_b)$$ 其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。现在我主要精力在于关注Jeong-Young Ji and Eric D. Held在2006年发表在POP上的工作并学习其推导高阶矩的一般方法。点击此处下载我的文献阅读工作1点击此处下载我的文献阅读工作2
+    <p>等离子体输运理论 等离子输运理论是等离子体动理学的一个部分，归根结底在于想办法用更高效的方法构建玻尔兹曼方程与模拟计算之间的桥梁。玻尔兹曼方程定义为： $$\partial_t f_a &#43; \mathbf{v} \cdot \nabla f_a &#43; \frac{e_a}{m_a}(\mathbf{E} &#43; \mathbf{v} \times \mathbf{B}) \cdot \partial_{\mathbf{v}} f_a = \sum_b C(f_a, f_b)$$ 其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。现在我主要精力在于关注Jeong-Young Ji and Eric D. Held在2006年发表在POP上的工作并学习其推导高阶矩的一般方法，如我的文献阅读工作1和文献阅读工作2
 </p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-07-28 20:34:48 +0800 CST'>July 28, 2026</span></footer>
+<span title='2026-07-28 20:34:48 +0800 CST'>July 28, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to 我当前正在进行的工作" href="http://localhost:1313/posts/my-article-about-my-works/"></a>
 </article>
     </main>

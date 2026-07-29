@@ -2,11 +2,27 @@ baseURL = "https://harmonicoscillator101.github.io/"
 locale = "zh-cn"
 title = "Harmonicoscillator的个人网站"
 theme = "PaperMod"
+enableEmoji = true
+enableRobotsTXT = true
+hasCJKLanguage = true
+paginate = 15
+summaryLength = 140
 
 [params]
   math = true
-  # 以下两行可以保留，但 profileMode 开启后，头像由 imageUrl 控制
-  # avatar = "/images/mostima.jpg"   # 可注释掉或删除
+  ShowCodeCopyButtons = true
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowWordCounts = true
+  ShowLastMod = true
+  ShowToc = true
+  TocOpen = true
+  comments = true
+
+[params.label]
+    text = "Harmonicoscillator"
+    icon = "/images/mostima.jpg"
+    iconHeight = 35
 
 [params.assets]
   custom_css = ["css/custom.css"]
@@ -17,15 +33,17 @@ theme = "PaperMod"
   minMatchCharLength = 1
   keys = ["title", "content", "summary"]
 
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Harmonicoscillator101"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:wzykyle101@foxmail.com"
+
 [params.profileMode]
   enabled = true
   title = "嗨，欢迎来到我的小站！"
-  subtitle = """
-  
-  📧 邮箱：wzykyle101@foxmail.com  
-  📱 手机：+86 13316203081 
-  💬 QQ：2630323748
-  """
   imageUrl = "/images/mostima.jpg"
   imageTitle = "我的头像"
   [[params.profileMode.buttons]]
@@ -82,3 +100,6 @@ theme = "PaperMod"
   baseName = "index"
   isPlainText = true
   notAlternative = true
+
+[markup.goldmark.renderer]
+  unsafe = true
