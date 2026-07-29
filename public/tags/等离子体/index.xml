@@ -6,8 +6,17 @@
     <description>Recent content in 等离子体 on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jul 2026 20:34:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 12:18:27 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>等离子体输运理论(0)</title>
+      <link>http://localhost:1313/posts/transform-of-plasma0/</link>
+      <pubDate>Wed, 29 Jul 2026 12:18:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/transform-of-plasma0/</guid>
+      <description>&lt;h1 id=&#34;等离子体输运理论0&#34;&gt;等离子体输运理论(0)&lt;/h1&gt;
+&lt;h2 id=&#34;写在开始之前&#34;&gt;写在开始之前&lt;/h2&gt;
+&lt;p&gt;花了一个晚上终于建好了自己的个人网站，我总想着要不写点什么吧！以防这个网站放在这里空荡荡的，但是思考了很久，除了上传了两篇笔记之外也没有再干什么。最后还是决定，把一直在学习和工作的和等离子体输运理论有关的东西发布出来，同时借此反向督促自己回顾过去的东西。我知道没什么人会访问这个网站，也许这样做只是为了杀时间罢了。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>我当前正在进行的工作</title>
       <link>http://localhost:1313/posts/my-article-about-my-works/</link>

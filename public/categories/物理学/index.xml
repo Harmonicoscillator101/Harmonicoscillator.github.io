@@ -6,8 +6,17 @@
     <description>Recent content in 物理学 on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Jul 2026 11:41:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 12:18:27 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/%E7%89%A9%E7%90%86%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>等离子体输运理论(0)</title>
+      <link>http://localhost:1313/posts/transform-of-plasma0/</link>
+      <pubDate>Wed, 29 Jul 2026 12:18:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/transform-of-plasma0/</guid>
+      <description>&lt;h1 id=&#34;等离子体输运理论0&#34;&gt;等离子体输运理论(0)&lt;/h1&gt;
+&lt;h2 id=&#34;写在开始之前&#34;&gt;写在开始之前&lt;/h2&gt;
+&lt;p&gt;花了一个晚上终于建好了自己的个人网站，我总想着要不写点什么吧！以防这个网站放在这里空荡荡的，但是思考了很久，除了上传了两篇笔记之外也没有再干什么。最后还是决定，把一直在学习和工作的和等离子体输运理论有关的东西发布出来，同时借此反向督促自己回顾过去的东西。我知道没什么人会访问这个网站，也许这样做只是为了杀时间罢了。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>数学物理方程笔记</title>
       <link>http://localhost:1313/posts/mathematical-physics-method-note/</link>
@@ -15,6 +24,24 @@
       <guid>http://localhost:1313/posts/mathematical-physics-method-note/</guid>
       <description>&lt;h1 id=&#34;数学物理方程笔记&#34;&gt;数学物理方程笔记&lt;/h1&gt;
 &lt;p&gt;华中科技大学物理学院的胡勇老师上的课非常好，讲义也是自编的，尽管有在认真听课，但是最终考出来比较一般。但是我比较庆幸自己能够最终理解求解PDE的根本在于Sturm-Liouville理论的基函数展开这一个逻辑。在这里把我做的&lt;a href=&#34;http://localhost:1313/files/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E7%A8%8B%E5%A4%8D%E4%B9%A0.pdf&#34;&gt;数学物理方程期末复习笔记&lt;/a&gt;放上来&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>我当前正在进行的工作</title>
+      <link>http://localhost:1313/posts/my-article-about-my-works/</link>
+      <pubDate>Tue, 28 Jul 2026 20:34:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/my-article-about-my-works/</guid>
+      <description>&lt;h1 id=&#34;等离子体输运理论&#34;&gt;等离子体输运理论&lt;/h1&gt;
+&lt;p&gt;等离子输运理论是等离子体动理学的一个部分，归根结底在于想办法用更高效的方法构建玻尔兹曼方程与模拟计算之间的桥梁。玻尔兹曼方程定义为：
+$$\partial_t f_a + \mathbf{v} \cdot \nabla f_a + \frac{e_a}{m_a}(\mathbf{E} + \mathbf{v} \times \mathbf{B}) \cdot \partial_{\mathbf{v}} f_a = \sum_b C(f_a, f_b)$$
+其中$f_a$是物种$a$粒子的分布函数，而$C(f_a,f_b)$则是碰撞项。等离子体输运理论最终都在关注这个碰撞项的截断。现在我主要精力在于关注Jeong-Young Ji and Eric D. Held在&lt;a href=&#34;http://localhost:1313/files/jijy06.pdf&#34;&gt;2006年发表在POP上的工作&lt;/a&gt;并学习其推导高阶矩的一般方法，如我的&lt;a href=&#34;http://localhost:1313/files/5.31%EF%BC%9AJi%E8%AE%BA%E6%96%87%E5%A4%8D%E6%8E%A8.pdf&#34;&gt;文献阅读工作1&lt;/a&gt;和&lt;a href=&#34;http://localhost:1313/files/6.7%EF%BC%9AJi%E8%AE%BA%E6%96%87%E5%A4%8D%E6%8E%A82.pdf&#34;&gt;文献阅读工作2&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>近代物理笔记</title>
+      <link>http://localhost:1313/posts/modern-physics-note/</link>
+      <pubDate>Tue, 28 Jul 2026 20:34:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/modern-physics-note/</guid>
+      <description>&lt;h1 id=&#34;近代物理笔记&#34;&gt;近代物理笔记&lt;/h1&gt;
+&lt;p&gt;华中科技大学物理学院李霖老师的近代物理课堂PPT整理得到的期末复习笔记。虽然老师讲得很好，但是我没怎么听过课，最后复习突击了一下也满绩了（虽然大概率只是跟期末考跟往年题重复率很高有关），在这里把笔记上传上来吧。&lt;a href=&#34;http://localhost:1313/files/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86%E5%A4%8D%E4%B9%A0.pdf&#34;&gt;近代物理笔记&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
