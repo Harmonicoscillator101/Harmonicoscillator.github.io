@@ -6,8 +6,16 @@
     <description>Recent content in 数学物理 on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jul 2026 20:34:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 11:41:45 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数学物理方程笔记</title>
+      <link>http://localhost:1313/posts/mathematical-physics-method-note/</link>
+      <pubDate>Wed, 29 Jul 2026 11:41:45 +0800</pubDate>
+      <guid>http://localhost:1313/posts/mathematical-physics-method-note/</guid>
+      <description>&lt;h1 id=&#34;数学物理方程笔记&#34;&gt;数学物理方程笔记&lt;/h1&gt;
+&lt;p&gt;华中科技大学物理学院的胡勇老师上的课非常好，讲义也是自编的，尽管有在认真听课，但是最终考出来比较一般。但是我比较庆幸自己能够最终理解求解PDE的根本在于Sturm-Liouville理论的基函数展开这一个逻辑。在这里把我做的&lt;a href=&#34;http://localhost:1313/files/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E7%A8%8B%E5%A4%8D%E4%B9%A0.pdf&#34;&gt;数学物理方程期末复习笔记&lt;/a&gt;放上来&lt;/p&gt;</description>
+    </item>
     <item>
       <title>我当前正在进行的工作</title>
       <link>http://localhost:1313/posts/my-article-about-my-works/</link>

@@ -4,7 +4,7 @@ draft: false
 title: '我当前正在进行的工作'
 math: true
 tags: ["等离子体", "输运理论"]
-categories: ["数学物理"]
+categories: ["物理学"]
 ---
 # 等离子体输运理论
 
