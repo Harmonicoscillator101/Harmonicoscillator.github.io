@@ -11,7 +11,8 @@
 写在开始之前
 花了一个晚上终于建好了自己的个人网站，我总想着要不写点什么吧！以防这个网站放在这里空荡荡的，但是思考了很久，除了上传了两篇笔记之外也没有再干什么。最后还是决定，把一直在学习和工作的和等离子体输运理论有关的东西发布出来，同时借此反向督促自己回顾过去的东西。我知道没什么人会访问这个网站，也许这样做只是为了杀时间罢了。">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/transform-of-plasma0/">
+<link rel="canonical" href="http://localhost:1313/posts/transform-of-plasma0/"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -69,22 +70,31 @@
 </script><link rel="stylesheet" href="/css/custom.css">
 
 <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true,
-      tags: 'ams'
-      packages: {'[+]': ['mathtools', 'bm']}   
-    },
-    options: {
-      ignoreHtmlClass: 'tex2jax_ignore',
-      processHtmlClass: 'tex2jax_process'
+MathJax = {
+  tex: {
+    inlineMath: [
+      ['$', '$'],
+      ['\\(', '\\)']
+    ],
+    displayMath: [
+      ['$$', '$$'],
+      ['\\[', '\\]']
+    ],
+    processEscapes: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {
+      '[+]': ['mathtools', 'bm']
     }
-  };
+  },
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
 
 </head>
 <body id="top">
@@ -174,7 +184,10 @@
 
 <span title='2026-07-29 12:18:27 +0800 CST'>July 29, 2026</span>&nbsp;·&nbsp;<span>4 min</span>
 
+<div  class="meta-item">&nbsp·&nbsp
+  <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
 </div>
+    </div>
   </header> <details class="toc"  open>
     <summary accesskey="c" title="(Alt + C)">
         <span class="title">Table of Contents</span>
@@ -350,6 +363,14 @@ $$\partial_t f_a + \mathbf{v} \cdot \nabla f_a + \frac{e_a}{m_a}(\mathbf{E} + \m
         }
     });
 </script>
-</body>
+
+<div class="busuanzi-footer">
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</div></body>
 
 </html>

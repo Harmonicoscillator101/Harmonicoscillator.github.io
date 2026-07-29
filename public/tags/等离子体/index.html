@@ -9,7 +9,8 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/">
+<link rel="canonical" href="http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -68,22 +69,31 @@
 </script><link rel="stylesheet" href="/css/custom.css">
 
 <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true,
-      tags: 'ams'
-      packages: {'[+]': ['mathtools', 'bm']}   
-    },
-    options: {
-      ignoreHtmlClass: 'tex2jax_ignore',
-      processHtmlClass: 'tex2jax_process'
+MathJax = {
+  tex: {
+    inlineMath: [
+      ['$', '$'],
+      ['\\(', '\\)']
+    ],
+    displayMath: [
+      ['$$', '$$'],
+      ['\\[', '\\]']
+    ],
+    processEscapes: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {
+      '[+]': ['mathtools', 'bm']
     }
-  };
+  },
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
 
 </head>
 <body class="list" id="top">
@@ -203,9 +213,9 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>单个粒子的漂移运动 Frenet坐标系 这同样是非常基础但是重要的一节。区别于固定的笛卡尔坐标系引入了一种动态坐标系，从而更简便地描述电磁学的场线等。
-对于三维空间的任意一条光滑的曲线，取其上任意一点，可以构造三个相互垂直的单位向量：
-1.切向量 $\bm{b}(\bm{r})$。其方向指向曲线在该点的前进方向,可以由原点到该点的位置矢量 $\bm{r}(s)$ 对自然参量 $s$（也就是弧长）的一阶导数来表示： ...</p>
+    <p>局域坐标系 这同样是非常基础但是重要的一节。区别于固定的笛卡尔坐标系引入了一种动态坐标系，从而更简便地描述电磁学的场线等。
+Frenet坐标系 对于三维空间的任意一条光滑的曲线，取其上任意一点，可以构造三个相互垂直的单位向量：
+1.切向量 $\boldsymbol{b}(\boldsymbol{r})$。其方向指向曲线在该点的前进方向,可以由原点到该点的位置矢量 $\boldsymbol{r}(s)$ 对自然参量 $s$（也就是弧长）的一阶导数来表示： ...</p>
   </div>
   <footer class="entry-footer">
 
@@ -307,6 +317,14 @@
     })
 
 </script>
-</body>
+
+<div class="busuanzi-footer">
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</div></body>
 
 </html>
