@@ -6,8 +6,34 @@
     <description>Recent content in 等离子体 on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Jul 2026 12:18:27 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>等离子体输运理论(3)</title>
+      <link>http://localhost:1313/posts/transport-of-plasma3/</link>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/transport-of-plasma3/</guid>
+      <description>&lt;h1 id=&#34;带电粒子在电磁场中的运动及如何将其纳入hamilton力学体系&#34;&gt;带电粒子在电磁场中的运动及如何将其纳入Hamilton力学体系&lt;/h1&gt;
+&lt;h2 id=&#34;均匀场下的漂移&#34;&gt;均匀场下的漂移&lt;/h2&gt;
+&lt;h3 id=&#34;回旋磁矩&#34;&gt;回旋磁矩&lt;/h3&gt;
+&lt;p&gt;对于垂直于磁场 $B$ 的一个载流线圈中，可以定义沿着轨道的平均电流为：
+&lt;/p&gt;
+$$
+    I=\frac{e \Omega}{2 \pi} \tag{1}
+$$&lt;p&gt;
+根据电磁学知识，磁矩可以由电流回路表示：
+&lt;/p&gt;
+$$
+    \mu = IS =\frac{e \Omega \rho_L^2}{2} \tag{2}
+$$&lt;p&gt;
+而回旋半径为 $\rho _L=v_{\perp}/\Omega$，且 $\Omega=eB/m$，
+因此回旋磁矩：
+&lt;/p&gt;
+$$
+    \mu=\frac{mv_{\perp}^2}{2B} \tag{3}
+$$&lt;p&gt;
+由叉乘关系，磁矩矢量 $\boldsymbol{\mu}$ 与 $\boldsymbol{B}$ 相反，因此 Larmor 回旋是抗磁的。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>等离子体输运理论(0)</title>
       <link>http://localhost:1313/posts/transport-of-plasma0/</link>
@@ -41,32 +67,6 @@ $$\dot{q}_i=\frac{\partial H(q,p)}{\partial p_i},\quad \dot{p}_i=-\frac{\partial
 &lt;p&gt;对于三维空间的任意一条光滑的曲线，取其上任意一点，可以构造三个相互垂直的单位向量：&lt;/p&gt;
 &lt;p&gt;1.切向量 $\boldsymbol{b}(\boldsymbol{r})$。其方向指向曲线在该点的前进方向,可以由原点到该点的位置矢量 $\boldsymbol{r}(s)$ 对自然参量 $s$（也就是弧长）的一阶导数来表示：
 &lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>等离子体输运理论(3)</title>
-      <link>http://localhost:1313/posts/transport-of-plasma3/</link>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/transport-of-plasma3/</guid>
-      <description>&lt;h1 id=&#34;带电粒子在电磁场中的运动及如何将其纳入hamilton力学体系&#34;&gt;带电粒子在电磁场中的运动及如何将其纳入Hamilton力学体系&lt;/h1&gt;
-&lt;h2 id=&#34;均匀场下的漂移&#34;&gt;均匀场下的漂移&lt;/h2&gt;
-&lt;h3 id=&#34;回旋磁矩&#34;&gt;回旋磁矩&lt;/h3&gt;
-&lt;p&gt;对于垂直于磁场 $B$ 的一个载流线圈中，可以定义沿着轨道的平均电流为：
-&lt;/p&gt;
-$$
-    I=\frac{e \Omega}{2 \pi} \tag{1}
-$$&lt;p&gt;
-根据电磁学知识，磁矩可以由电流回路表示：
-&lt;/p&gt;
-$$
-    \mu = IS =\frac{e \Omega \rho_L^2}{2} \tag{2}
-$$&lt;p&gt;
-而回旋半径为 $\rho _L=v_{\perp}/\Omega$，且 $\Omega=eB/m$，
-因此回旋磁矩：
-&lt;/p&gt;
-$$
-    \mu=\frac{mv_{\perp}^2}{2B} \tag{3}
-$$&lt;p&gt;
-由叉乘关系，磁矩矢量 $\bm{\mu}$ 与 $\bm{B}$ 相反，因此 Larmor 回旋是抗磁的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>我当前正在进行的工作</title>

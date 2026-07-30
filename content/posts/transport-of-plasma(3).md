@@ -101,7 +101,7 @@ $$
 $$
 其中 $\boldsymbol{D}=v_{\parallel}(\nabla\times \boldsymbol{b})+v_{\perp}(\nabla \times \boldsymbol{n}_1)$。其中 $L_H$ 与 $L_H'$ 都是特征长度。由于 $\rho \ll L_H$ 及 $L_H'$，那么 $v_{\perp}/\rho_L$ 占据主导地位。
 
-作者使用了一个数学技巧。他替换了 $eB/m=\Omega \to \frac{1}{\epsilon}\Omega$，其中 $\epsilon$ 为标度参量，是一个数量级的指示符号，将其代入动力学方程，Hamilton 函数是一致的。实际上，这个技巧可以给出很好的物理图像。当 $\epsilon \ll 1$ 时候，$v_{\perp}/\rho _L$ 显著，符合漂移近似。
+替换 $eB/m=\Omega \to \frac{1}{\epsilon}\Omega$，其中 $\epsilon$ 为标度参量，是一个数量级的指示符号，将其代入动力学方程，Hamilton 函数是一致的。实际上，这个技巧可以给出很好的物理图像。当 $\epsilon \ll 1$ 时候，$v_{\perp}/\rho _L$ 显著，符合漂移近似。
 
 ### 平均法的数学处理
 
@@ -131,7 +131,7 @@ $$
 
 ### 消除振荡项（一）
 
-作者引用 Kruskal 的话，认为运动方程依赖于回旋相角会导致无法精细地描述运动过程，因为 $a(x_t,\varphi)$ 可能会突然涨落、净漂移率不明显，需要引入一种无限可微的变换形式，并且去除依赖关系。
+引用 Kruskal，运动方程依赖于回旋相角会导致无法精细地描述运动过程，因为 $a(x_t,\varphi)$ 可能会突然涨落、净漂移率不明显，需要引入一种无限可微的变换形式，并且去除依赖关系。
 
 用新变量 $(\xi_k,\phi)$ 替换 $(x_k,\varphi)$，这两个变量相差足够小，其满足的微分方程不包含迅速变化的相角。
 
@@ -232,7 +232,7 @@ $$
 
 ## 漂移近似的 Hamilton 力学体系
 
-作者在这里介绍前人的工作（如 Kruskal）把上述的平均法纳入到 Hamilton 体系当中去。
+接下来，我们要把平均法纳入到 Hamilton 体系当中去。
 
 **Kruskal‑Little John 定理**：  
 存在一个从粒子精确相空间坐标 $\mathbf{z}$ 到新坐标 $\mathbf{Z}$ 的**赝正则变换**：

@@ -19,6 +19,27 @@ summaryLength = 140
   TocOpen = true
   comments = true
 
+[params.page]
+  [params.page.comment]
+      enable = true
+      # giscus comment 评论系统设置 (https://giscus.app/zh-CN)
+      [params.page.comment.giscus]
+        # 你可以参考官方文档来使用下列配置
+        enable = true
+        data-repo="Harmonicoscillator101/blog-comments"
+        data-repo-id="R_kgDOToNRwA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOToNRwM4DCTmu"
+        # 为空时自动适配当前主题 i18n 配置
+        lang = ""
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lazyLoading = false
+        lightTheme = "light"
+        darkTheme = "dark"
+
 [params.busuanzi]
     enable = true
 
