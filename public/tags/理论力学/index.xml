@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/tags/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>等离子体输运理论(1)</title>
-      <link>http://localhost:1313/posts/transform-of-plasma1/</link>
+      <link>http://localhost:1313/posts/transport-of-plasma1/</link>
       <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/transform-of-plasma1/</guid>
+      <guid>http://localhost:1313/posts/transport-of-plasma1/</guid>
       <description>&lt;h1 id=&#34;hamilton力学从正则变换到赝正则变换&#34;&gt;Hamilton力学:从正则变换到赝正则变换&lt;/h1&gt;
 &lt;h2 id=&#34;hamilton正则方程与正则变换&#34;&gt;Hamilton正则方程与正则变换&lt;/h2&gt;
 &lt;p&gt;在经典Hamilton力学中，自由度为 $s$ 的系统需要规定 $2s$ 个变量，我们在理论力学课程中知道它们是广义坐标 $q_i\ (i=1,2,\dots,s)$ 和广义动量 $p_i\ (i=1,2,\dots,s)$。假设Hamilton函数 $H$ 不显含时间，这样的系统被称为自洽系统。系统的运动满足Hamilton正则方程：

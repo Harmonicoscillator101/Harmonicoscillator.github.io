@@ -10,18 +10,18 @@
     <atom:link href="http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>等离子体输运理论(0)</title>
-      <link>http://localhost:1313/posts/transform-of-plasma0/</link>
+      <link>http://localhost:1313/posts/transport-of-plasma0/</link>
       <pubDate>Wed, 29 Jul 2026 12:18:27 +0800</pubDate>
-      <guid>http://localhost:1313/posts/transform-of-plasma0/</guid>
+      <guid>http://localhost:1313/posts/transport-of-plasma0/</guid>
       <description>&lt;h1 id=&#34;等离子体输运理论0&#34;&gt;等离子体输运理论(0)&lt;/h1&gt;
 &lt;h2 id=&#34;写在开始之前&#34;&gt;写在开始之前&lt;/h2&gt;
 &lt;p&gt;花了一个晚上终于建好了自己的个人网站，我总想着要不写点什么吧！以防这个网站放在这里空荡荡的，但是思考了很久，除了上传了两篇笔记之外也没有再干什么。最后还是决定，把一直在学习和工作的和等离子体输运理论有关的东西发布出来，同时借此反向督促自己回顾过去的东西。我知道没什么人会访问这个网站，也许这样做只是为了杀时间罢了。&lt;/p&gt;</description>
     </item>
     <item>
       <title>等离子体输运理论(1)</title>
-      <link>http://localhost:1313/posts/transform-of-plasma1/</link>
+      <link>http://localhost:1313/posts/transport-of-plasma1/</link>
       <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/transform-of-plasma1/</guid>
+      <guid>http://localhost:1313/posts/transport-of-plasma1/</guid>
       <description>&lt;h1 id=&#34;hamilton力学从正则变换到赝正则变换&#34;&gt;Hamilton力学:从正则变换到赝正则变换&lt;/h1&gt;
 &lt;h2 id=&#34;hamilton正则方程与正则变换&#34;&gt;Hamilton正则方程与正则变换&lt;/h2&gt;
 &lt;p&gt;在经典Hamilton力学中，自由度为 $s$ 的系统需要规定 $2s$ 个变量，我们在理论力学课程中知道它们是广义坐标 $q_i\ (i=1,2,\dots,s)$ 和广义动量 $p_i\ (i=1,2,\dots,s)$。假设Hamilton函数 $H$ 不显含时间，这样的系统被称为自洽系统。系统的运动满足Hamilton正则方程：
@@ -32,15 +32,41 @@ $$\dot{q}_i=\frac{\partial H(q,p)}{\partial p_i},\quad \dot{p}_i=-\frac{\partial
     </item>
     <item>
       <title>等离子体输运理论(2)</title>
-      <link>http://localhost:1313/posts/transform-of-plasma2/</link>
+      <link>http://localhost:1313/posts/transport-of-plasma2/</link>
       <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/transform-of-plasma2/</guid>
+      <guid>http://localhost:1313/posts/transport-of-plasma2/</guid>
       <description>&lt;h2 id=&#34;局域坐标系&#34;&gt;局域坐标系&lt;/h2&gt;
 &lt;p&gt;这同样是非常基础但是重要的一节。区别于固定的笛卡尔坐标系引入了一种动态坐标系，从而更简便地描述电磁学的场线等。&lt;/p&gt;
 &lt;h3 id=&#34;frenet坐标系&#34;&gt;Frenet坐标系&lt;/h3&gt;
 &lt;p&gt;对于三维空间的任意一条光滑的曲线，取其上任意一点，可以构造三个相互垂直的单位向量：&lt;/p&gt;
 &lt;p&gt;1.切向量 $\boldsymbol{b}(\boldsymbol{r})$。其方向指向曲线在该点的前进方向,可以由原点到该点的位置矢量 $\boldsymbol{r}(s)$ 对自然参量 $s$（也就是弧长）的一阶导数来表示：
 &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>等离子体输运理论(3)</title>
+      <link>http://localhost:1313/posts/transport-of-plasma3/</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/transport-of-plasma3/</guid>
+      <description>&lt;h1 id=&#34;带电粒子在电磁场中的运动及如何将其纳入hamilton力学体系&#34;&gt;带电粒子在电磁场中的运动及如何将其纳入Hamilton力学体系&lt;/h1&gt;
+&lt;h2 id=&#34;均匀场下的漂移&#34;&gt;均匀场下的漂移&lt;/h2&gt;
+&lt;h3 id=&#34;回旋磁矩&#34;&gt;回旋磁矩&lt;/h3&gt;
+&lt;p&gt;对于垂直于磁场 $B$ 的一个载流线圈中，可以定义沿着轨道的平均电流为：
+&lt;/p&gt;
+$$
+    I=\frac{e \Omega}{2 \pi} \tag{1}
+$$&lt;p&gt;
+根据电磁学知识，磁矩可以由电流回路表示：
+&lt;/p&gt;
+$$
+    \mu = IS =\frac{e \Omega \rho_L^2}{2} \tag{2}
+$$&lt;p&gt;
+而回旋半径为 $\rho _L=v_{\perp}/\Omega$，且 $\Omega=eB/m$，
+因此回旋磁矩：
+&lt;/p&gt;
+$$
+    \mu=\frac{mv_{\perp}^2}{2B} \tag{3}
+$$&lt;p&gt;
+由叉乘关系，磁矩矢量 $\bm{\mu}$ 与 $\bm{B}$ 相反，因此 Larmor 回旋是抗磁的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>我当前正在进行的工作</title>
