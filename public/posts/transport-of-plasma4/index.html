@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>等离子体输运理论(4) | Harmonicoscillator的个人网站</title>
+<meta name="keywords" content="等离子体, 输运理论, 笔记">
+<meta name="description" content="等离体分布函数的导出与微观机制
+相空间分布函数
+相空间分布函数
+相空间分布函数 $F(q,p;t)$ 满足归一化条件：
+
+$$
+\int F(q,p;t)d^{3N}qd^{3N}p = 1
+$$
+可以将 $F$ 看作 $t$ 时刻 $(q,p)$ 的概率密度。
+相空间的概率密度自然满足 Liouville 定理：
+Liouville 定理：
+
+$$
+\frac{dF}{dt} = \frac{\partial F}{\partial t} &#43; \{F, H\} = 0
+$$
+记 $L$ 为 Liouville 算符：
+
+$$
+\frac{\partial F}{\partial t} = \{H, F\} = LF, \qquad L = -\sum_j \left( \dot{\boldsymbol{q}}_j \frac{\partial}{\partial q_j} &#43; \dot{\boldsymbol{p}}_j \frac{\partial}{\partial p_j} \right)
+$$约化分布函数
+将分布函数简化为约化分布函数以考虑最重要的关系。
+约化分布函数 $\hat{f_s^a}(q_1,\dots,q_s,p_1,\dots,p_s;t)$：
+对于单粒子（$a$ 表示粒子种类，$N_a$ 为该种粒子的数量）：
+">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/transport-of-plasma4/"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/mostima1.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/transport-of-plasma4/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="stylesheet" href="/css/custom.css">
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [
+      ['$', '$'],
+      ['\\(', '\\)']
+    ],
+    displayMath: [
+      ['$$', '$$'],
+      ['\\[', '\\]']
+    ],
+    processEscapes: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {
+      '[+]': ['mathtools', 'bm']
+    }
+  },
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Harmonicoscillator (Alt + H)">
+                <img src="http://localhost:1313/images/mostima.jpg" alt="" aria-label="logo"
+                    height="35">Harmonicoscillator</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/life/" title="生活">
+                    <span>生活</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="时间轴">
+                    <span>时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">文章</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      等离子体输运理论(4)
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-08-01 00:00:00 +0000 UTC'>August 1, 2026</span>&nbsp;·&nbsp;<span>3 min</span>
+
+<div  class="meta-item">&nbsp·&nbsp
+  <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+</div>
+    </div>
+  </header> <details class="toc"  open>
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Table of Contents</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#%e7%ad%89%e7%a6%bb%e4%bd%93%e5%88%86%e5%b8%83%e5%87%bd%e6%95%b0%e7%9a%84%e5%af%bc%e5%87%ba%e4%b8%8e%e5%be%ae%e8%a7%82%e6%9c%ba%e5%88%b6" aria-label="等离体分布函数的导出与微观机制">等离体分布函数的导出与微观机制</a><ul>
+                    
+            <li>
+                <a href="#%e7%9b%b8%e7%a9%ba%e9%97%b4%e5%88%86%e5%b8%83%e5%87%bd%e6%95%b0" aria-label="相空间分布函数">相空间分布函数</a><ul>
+                    
+            <li>
+                <a href="#%e7%9b%b8%e7%a9%ba%e9%97%b4%e5%88%86%e5%b8%83%e5%87%bd%e6%95%b0-1" aria-label="相空间分布函数">相空间分布函数</a></li>
+            <li>
+                <a href="#%e7%ba%a6%e5%8c%96%e5%88%86%e5%b8%83%e5%87%bd%e6%95%b0" aria-label="约化分布函数">约化分布函数</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e5%ae%9a%e6%80%81%e5%9c%ba%e4%b8%ad%e7%8b%ac%e7%ab%8b%e5%8d%95%e7%b2%92%e5%ad%90%e7%b3%bb%e7%bb%9f" aria-label="定态场中独立单粒子系统">定态场中独立单粒子系统</a><ul>
+                    
+            <li>
+                <a href="#liouville-%e6%96%b9%e7%a8%8b" aria-label="Liouville 方程">Liouville 方程</a></li>
+            <li>
+                <a href="#liouville-%e6%96%b9%e7%a8%8b%e7%ac%ac%e4%b8%80%e7%a7%8d%e5%bd%a2%e5%bc%8f" aria-label="Liouville 方程第一种形式">Liouville 方程第一种形式</a></li>
+            <li>
+                <a href="#%e8%b5%9d%e6%ad%a3%e5%88%99%e5%8f%98%e6%8d%a2" aria-label="赝正则变换">赝正则变换</a></li>
+            <li>
+                <a href="#liouville-%e6%96%b9%e7%a8%8b%e7%ac%ac%e4%ba%8c%e7%a7%8d%e5%bd%a2%e5%bc%8f" aria-label="Liouville 方程第二种形式">Liouville 方程第二种形式</a></li>
+            <li>
+                <a href="#%e5%b0%86%e5%b9%bf%e4%b9%89%e5%8a%a8%e9%87%8f%e5%8f%98%e6%8d%a2%e4%b8%ba%e6%9c%ba%e6%a2%b0%e5%8a%a8%e9%87%8f" aria-label="将广义动量变换为机械动量">将广义动量变换为机械动量</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e6%97%b6%e5%8f%98%e5%a4%96%e5%9c%ba%e7%8b%ac%e7%ab%8b%e5%8d%95%e7%b2%92%e5%ad%90%e7%b3%bb%e7%bb%9f" aria-label="时变外场独立单粒子系统">时变外场独立单粒子系统</a><ul>
+                    
+            <li>
+                <a href="#%e6%89%a9%e5%b1%95%e7%9b%b8%e7%a9%ba%e9%97%b4%e4%b8%ad%e7%9a%84%e7%bb%9f%e8%ae%a1%e5%8a%9b%e5%ad%a6%e8%a1%a8%e8%bf%b0" aria-label="扩展相空间中的统计力学表述">扩展相空间中的统计力学表述</a></li>
+            <li>
+                <a href="#%e5%bc%b1%e6%96%b9%e7%a8%8b%e4%b8%8e%e7%89%a9%e7%90%86%e7%ba%a6%e6%9d%9f" aria-label="弱方程与物理约束">弱方程与物理约束</a></li>
+            <li>
+                <a href="#%e5%90%ab%e6%97%b6%e7%9a%84-liouville-%e6%96%b9%e7%a8%8b" aria-label="含时的 Liouville 方程">含时的 Liouville 方程</a>
+            </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><h1 id="等离体分布函数的导出与微观机制">等离体分布函数的导出与微观机制<a hidden class="anchor" aria-hidden="true" href="#等离体分布函数的导出与微观机制">#</a></h1>
+<h2 id="相空间分布函数">相空间分布函数<a hidden class="anchor" aria-hidden="true" href="#相空间分布函数">#</a></h2>
+<h3 id="相空间分布函数-1">相空间分布函数<a hidden class="anchor" aria-hidden="true" href="#相空间分布函数-1">#</a></h3>
+<p>相空间分布函数 $F(q,p;t)$ 满足归一化条件：
+</p>
+$$
+\int F(q,p;t)d^{3N}qd^{3N}p = 1
+$$<p>
+可以将 $F$ 看作 $t$ 时刻 $(q,p)$ 的概率密度。</p>
+<p>相空间的概率密度自然满足 Liouville 定理：</p>
+<p><strong>Liouville 定理</strong>：
+</p>
+$$
+\frac{dF}{dt} = \frac{\partial F}{\partial t} + \{F, H\} = 0
+$$<p>
+记 $L$ 为 Liouville 算符：
+</p>
+$$
+\frac{\partial F}{\partial t} = \{H, F\} = LF, \qquad L = -\sum_j \left( \dot{\boldsymbol{q}}_j \frac{\partial}{\partial q_j} + \dot{\boldsymbol{p}}_j \frac{\partial}{\partial p_j} \right)
+$$<h3 id="约化分布函数">约化分布函数<a hidden class="anchor" aria-hidden="true" href="#约化分布函数">#</a></h3>
+<p>将分布函数简化为约化分布函数以考虑最重要的关系。</p>
+<p><strong>约化分布函数 $\hat{f_s^a}(q_1,\dots,q_s,p_1,\dots,p_s;t)$</strong>：</p>
+<p>对于单粒子（$a$ 表示粒子种类，$N_a$ 为该种粒子的数量）：
+</p>
+$$
+\hat{f}^a_1(q_1,p_1;t) = N_a \int F(q,p;t) \, dq_2 \cdots dq_N \, dp_2 \cdots dp_N
+$$<p>
+满足归一化条件：
+</p>
+$$
+\int \hat{f}^a(q,p;t) \, dp_1 \, dq_1 = N_a
+$$<p>动力学函数 $b$ 的加权平均值：
+</p>
+$$
+\langle b \rangle = \sum_a \int b^a(q,p) \, \hat{f}^a_1(q,p;t) \, dq \, dp
+$$<h2 id="定态场中独立单粒子系统">定态场中独立单粒子系统<a hidden class="anchor" aria-hidden="true" href="#定态场中独立单粒子系统">#</a></h2>
+<h3 id="liouville-方程">Liouville 方程<a hidden class="anchor" aria-hidden="true" href="#liouville-方程">#</a></h3>
+<p>主要目标是导出 $\hat{f}^a_1(q,p;t)$ 的封闭演化方程。考虑定态外加电磁场，且粒子系统是理想系统，即粒子之间没有相互作用，且粒子种类相同。这些粒子总共的 Hamilton 函数为：
+</p>
+$$
+H(q,p) = \sum_{j=1}^N \left( \frac{1}{2m_{a_j}} |\boldsymbol{p}_j - e_a \boldsymbol{A}(\boldsymbol{q}_j)|^2 + e_a \Phi_0(\boldsymbol{q}_j) \right) = \sum_j H_j^a(q_j,p_j)
+$$<p>求和 Liouville 算符：
+</p>
+$$
+L = \sum_j L_j^a
+$$<p>
+</p>
+$$
+L_j^a = -\left( \{q_j, H_j\} \frac{\partial}{\partial q_j} + \{p_j, H_j\} \frac{\partial}{\partial p_j} \right)
+$$<p>
+</p>
+$$
+\frac{\partial F}{\partial t} = LF = \left( \sum_j^N L_j^a \right) F
+$$<h3 id="liouville-方程第一种形式">Liouville 方程第一种形式<a hidden class="anchor" aria-hidden="true" href="#liouville-方程第一种形式">#</a></h3>
+<p>两边乘上 $N_a$ 再对无约束关系的粒子位置与动量求积分：
+</p>
+$$
+\int N_a \frac{\partial F}{\partial t} \, dp_2 \cdots dp_N \, dq_2 \cdots dq_N = \int N_a \left( \sum_j^N L_j^a \right) F \, dp_2 \cdots dp_N \, dq_2 \cdots dq_N
+$$<p>
+从而得到 Liouville 方程的第一种情况：</p>
+<p><strong>Liouville 方程的第一种形式</strong>：
+</p>
+$$
+\frac{\partial}{\partial t} \hat{f}^a = L^a \hat{f}^a(q,p,t) = \{H^a, \hat{f}^a\} = \{H_0^a, q\} \frac{\partial \hat{f}^a}{\partial q} + \{H_0^a, p\} \frac{\partial \hat{f}^a}{\partial p}
+$$<p>
+其中
+</p>
+$$
+H_0^a = \frac{1}{2m_a} |\boldsymbol{p} - e_a \boldsymbol{A}(\boldsymbol{q})|^2 + e_a \Phi_0(\boldsymbol{q})
+$$<h3 id="赝正则变换">赝正则变换<a hidden class="anchor" aria-hidden="true" href="#赝正则变换">#</a></h3>
+<p>$(q,p)$ 在物理学中是不便的，要将其变换成 $(q,v)$ 或者导心运动变量等。</p>
+<p><strong>相空间坐标变换</strong>：
+</p>
+$$
+\hat{f}^a(q,p;t) \to \hat{f}'^a(Q,P;t)
+$$<p>
+</p>
+$$
+b^a(q,p) \to b'^a(Q,P)
+$$<p>
+动力学函数平均值：
+</p>
+$$
+\langle b \rangle = \sum_a \int d\boldsymbol{Q} \, d\boldsymbol{P} \, |J^a(\boldsymbol{Q}, \boldsymbol{P})| \, b'^a(\boldsymbol{Q}, \boldsymbol{P}) \, \hat{f}'^a(\boldsymbol{Q}, \boldsymbol{P}; t)
+$$<p>
+在这里面出现了 Jacobi 行列式，这是由于变换为真实分布函数：
+</p>
+$$
+\hat{f}^a(q,p;t) = |J^a(Q,P)| \, \hat{f}'^a(Q,P;t)
+$$<p>
+且仍要满足归一化条件：
+</p>
+$$
+\int dQ \, dP \, |J^a(Q,P)| \, \hat{f}'^a(Q,P;t) = N_a
+$$<h3 id="liouville-方程第二种形式">Liouville 方程第二种形式<a hidden class="anchor" aria-hidden="true" href="#liouville-方程第二种形式">#</a></h3>
+<p><strong>一个重要引理</strong>：
+</p>
+$$
+\sum_{i=1}^{f} \left( \frac{\partial}{\partial Q_i} \left( |J^a| \, \{H, Q_i\} \right) + \frac{\partial}{\partial P_i} \left( |J^a| \, \{H, P_i\} \right) \right) = 0
+$$<p>将其与 Liouville 定理结合，就得到了真实分布函数的演化方程：</p>
+<p><strong>Liouville 方程的第二种形式</strong>：
+</p>
+$$
+\frac{\partial}{\partial t} |J^a| \hat{f}'^a = \frac{\partial}{\partial Q} \cdot \left( [H_0^a, Q] \, |J^a| \hat{f}^a \right) + \frac{\partial}{\partial P} \cdot \left( [H_0^a, P] \, |J^a| \hat{f}^a \right)
+$$<h3 id="将广义动量变换为机械动量">将广义动量变换为机械动量<a hidden class="anchor" aria-hidden="true" href="#将广义动量变换为机械动量">#</a></h3>
+<p>将广义动量 $p$ 替换为机械动量 $mv$，从而有以下的变换：
+</p>
+$$
+\hat{f}^a(\boldsymbol{q}, \boldsymbol{p};t) \to |J^a| \hat{f}'^a(\boldsymbol{q}, \boldsymbol{v};t), \qquad |J^a| = m_a^3
+$$<p>
+再定义 $f^a(q,v;t) = |J^a| \hat{f}'^a(q,v;t)$，且仍满足归一化条件。之后都以 $(q,v) \to (Q,P)$ 做非正则变换。</p>
+<p><strong>机械动量的 Liouville 算符</strong>：
+</p>
+$$
+\frac{\partial}{\partial t} f^a = L^a f^a(\boldsymbol{q}, \boldsymbol{v};t)
+$$<p>
+将算符替换为：
+</p>
+$$
+\mathscr{L}^a = -\frac{\partial}{\partial \boldsymbol{q}} \cdot \boldsymbol{v} - \frac{\partial}{\partial \boldsymbol{v}} \cdot \frac{e_a}{m_a} \left[ \boldsymbol{v} \times \boldsymbol{B}(\boldsymbol{q}) + \boldsymbol{E}(\boldsymbol{q}) \right]
+$$<p>
+故第二种形式为：
+</p>
+$$
+\frac{\partial}{\partial t} |J^a| f^a = \mathscr{L}^a |J^a| f^a
+$$<h2 id="时变外场独立单粒子系统">时变外场独立单粒子系统<a hidden class="anchor" aria-hidden="true" href="#时变外场独立单粒子系统">#</a></h2>
+<h3 id="扩展相空间中的统计力学表述">扩展相空间中的统计力学表述<a hidden class="anchor" aria-hidden="true" href="#扩展相空间中的统计力学表述">#</a></h3>
+<p>在随时间变化外场中，传统相空间需要扩展：</p>
+<ul>
+<li>添加正则变量对：$t$（时间）和 $h$（共轭变量）</li>
+<li>扩展 Hamilton 函数：$H(q,p,t,h) = H_0(q,p,t) + h$</li>
+<li>使用固有时 $\tau$ 参数化运动</li>
+</ul>
+<p>扩展相空间中的归一化条件：
+</p>
+$$
+\int dQ \, dP \int dk \int dt \, |\tilde{J}^a(Q,P,k,t)| \, \tilde{f}^a(Q,P,k,t;\tau) = N_a
+$$<p>
+这要求对时间 $t$ 从 $-\infty$ 到 $+\infty$ 积分，涉及整个系统历史，物理上不合理。</p>
+<p><strong>核心问题</strong>：数学上独立的变量 $(Q,P,k,t)$ 在物理上并不独立，需要通过约束条件来限制积分区域。</p>
+<h3 id="弱方程与物理约束">弱方程与物理约束<a hidden class="anchor" aria-hidden="true" href="#弱方程与物理约束">#</a></h3>
+<p><strong>弱方程</strong>：</p>
+<ul>
+<li><strong>时间约束</strong>：$t = \tau$</li>
+<li><strong>能量约束</strong>：$\dot{H}_0^a(Q,P,t) = -\dot{k}$，等价于 $H_0^a(Q,P,k,t) = H_0^a(Q,P,t) + k = 0$</li>
+</ul>
+<p>Dirac 的弱方程理论：</p>
+<ul>
+<li>在计算 Poisson 括号前，不能使用约束条件</li>
+<li>约束条件只能作为“弱方程”使用</li>
+</ul>
+<p><strong>新的归一化条件</strong>：使用 Dirac delta 函数限制到物理可及区域：
+</p>
+$$
+\int dQ \, dP \int dk \int dt \, |J^a| \, \delta(\tilde{H}^a) \, \delta(t-\tau) \, \tilde{f}^a(Q,P,k,t) = N_a
+$$<p>
+其中 $\delta(\tilde{H}^a)$ 实施能量约束，$\delta(t-\tau)$ 实施时间约束。</p>
+<h3 id="含时的-liouville-方程">含时的 Liouville 方程<a hidden class="anchor" aria-hidden="true" href="#含时的-liouville-方程">#</a></h3>
+<p>对 $t$ 作平凡积分将其消去，再引入物理分布函数：
+</p>
+$$
+f^a(Q,P;t) = \int dk \, \delta(\tilde{H}_0^a(Q,P;t) + k) \, \tilde{f}^a(Q,P,k,t;t)
+$$<p>
+这一个分布函数也满足归一化条件。</p>
+<p><strong>含时 Liouville 方程</strong>：
+</p>
+$$
+\begin{aligned}
+&\frac{\partial}{\partial t} |J^a(Q,P,t)| f^a(Q,P;t) \\
+&= \left( \frac{\partial}{\partial Q} \cdot [H_0^a(Q,P,t), Q] + \frac{\partial}{\partial P} \cdot [H_0^a(Q,P,t), P] \right) \\
+&\quad \times |J^a(Q,P,t)| f^a(Q,P;t)
+\end{aligned}
+$$<p>
+或者更简洁地写为：
+</p>
+$$
+\frac{\partial}{\partial t} |J^a| f^a(t) = \mathscr{L}^a |J^a| f^a(t)
+$$
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/">等离子体</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%BE%93%E8%BF%90%E7%90%86%E8%AE%BA/">输运理论</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Harmonicoscillator的个人网站</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+
+<div class="busuanzi-footer">
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</div></body>
+
+</html>

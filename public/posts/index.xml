@@ -6,8 +6,38 @@
     <description>Recent content in 文章 on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 30 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>等离子体输运理论(4)</title>
+      <link>http://localhost:1313/posts/transport-of-plasma4/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/transport-of-plasma4/</guid>
+      <description>&lt;h1 id=&#34;等离体分布函数的导出与微观机制&#34;&gt;等离体分布函数的导出与微观机制&lt;/h1&gt;
+&lt;h2 id=&#34;相空间分布函数&#34;&gt;相空间分布函数&lt;/h2&gt;
+&lt;h3 id=&#34;相空间分布函数-1&#34;&gt;相空间分布函数&lt;/h3&gt;
+&lt;p&gt;相空间分布函数 $F(q,p;t)$ 满足归一化条件：
+&lt;/p&gt;
+$$
+\int F(q,p;t)d^{3N}qd^{3N}p = 1
+$$&lt;p&gt;
+可以将 $F$ 看作 $t$ 时刻 $(q,p)$ 的概率密度。&lt;/p&gt;
+&lt;p&gt;相空间的概率密度自然满足 Liouville 定理：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Liouville 定理&lt;/strong&gt;：
+&lt;/p&gt;
+$$
+\frac{dF}{dt} = \frac{\partial F}{\partial t} + \{F, H\} = 0
+$$&lt;p&gt;
+记 $L$ 为 Liouville 算符：
+&lt;/p&gt;
+$$
+\frac{\partial F}{\partial t} = \{H, F\} = LF, \qquad L = -\sum_j \left( \dot{\boldsymbol{q}}_j \frac{\partial}{\partial q_j} + \dot{\boldsymbol{p}}_j \frac{\partial}{\partial p_j} \right)
+$$&lt;h3 id=&#34;约化分布函数&#34;&gt;约化分布函数&lt;/h3&gt;
+&lt;p&gt;将分布函数简化为约化分布函数以考虑最重要的关系。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;约化分布函数 $\hat{f_s^a}(q_1,\dots,q_s,p_1,\dots,p_s;t)$&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;对于单粒子（$a$ 表示粒子种类，$N_a$ 为该种粒子的数量）：
+&lt;/p&gt;</description>
+    </item>
     <item>
       <title>等离子体输运理论(3)</title>
       <link>http://localhost:1313/posts/transport-of-plasma3/</link>

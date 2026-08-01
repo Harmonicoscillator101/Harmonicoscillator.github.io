@@ -1,6 +1,6 @@
 ---
 title: "等离子体输运理论(4)"
-date: 2026-08-02
+date: 2026-08-01
 draft: false
 math: true
 tags: ["等离子体", "输运理论","笔记"]
@@ -49,7 +49,6 @@ $$
 \langle b \rangle = \sum_a \int b^a(q,p) \, \hat{f}^a_1(q,p;t) \, dq \, dp
 $$
 
----
 
 ## 定态场中独立单粒子系统
 
@@ -147,7 +146,6 @@ $$
 \frac{\partial}{\partial t} |J^a| f^a = \mathscr{L}^a |J^a| f^a
 $$
 
----
 
 ## 时变外场独立单粒子系统
 
