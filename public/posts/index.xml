@@ -6,8 +6,35 @@
     <description>Recent content in 文章 on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>等离子体输运理论(5)</title>
+      <link>http://localhost:1313/posts/transport-of-plasma5/</link>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/transport-of-plasma5/</guid>
+      <description>&lt;h1 id=&#34;等离体动理方程&#34;&gt;等离体动理方程&lt;/h1&gt;
+&lt;h2 id=&#34;相互作用带电粒子系统&#34;&gt;相互作用带电粒子系统&lt;/h2&gt;
+&lt;h3 id=&#34;含相互作用势的-hamilton-量&#34;&gt;含相互作用势的 Hamilton 量&lt;/h3&gt;
+&lt;p&gt;最为简单的方法是为 Hamilton 函数添加相互作用势，如下所示：&lt;/p&gt;
+&lt;p&gt;含相互作用势的 Hamilton 函数：&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+H(q,v) &amp;amp;= \sum_{j=1}^N \left[ \frac{1}{2} m_{a_j} v_j^2 + e_{a_j} \Phi_0(q_j) \right] + \sum_{n=1}^N \sum_{j=1}^{j&amp;lt;n} V_{j,n}(q_j,q_n)= \sum_{j=1}^N H_{0_j}^a + \sum_{n=1}^N \sum_{j=1}^{j&amp;lt;n} V_{j,n}
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;带电粒子系统中两个粒子首先满足库仑定律，因此势函数可以写为：
+&lt;/p&gt;
+$$
+V_{j,n}(q_j,q_n) = e_{a_j} e_{a_n} \frac{1}{|\boldsymbol{q} - \boldsymbol{q}_n|}
+$$&lt;p&gt;
+因此势函数仅仅依赖于粒子之间的距离。&lt;/p&gt;
+&lt;h3 id=&#34;全电离非相对论等离体模型&#34;&gt;全电离非相对论等离体模型&lt;/h3&gt;
+&lt;p&gt;以上的式子满足两个近似：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;粒子系统是全电离的，排除了中性粒子，以及电荷交换等其他的相互作用，总之粒子系统是相当理想的。&lt;/li&gt;
+&lt;li&gt;粒子系统必须符合非相对论近似，换言之它们的相对速度没有达到光速量级以至于相对论效应可以忽略。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;太多复杂的细枝末节先不考虑，这样构成了全电离非相对论等离体模型。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>等离子体输运理论(4)</title>
       <link>http://localhost:1313/posts/transport-of-plasma4/</link>

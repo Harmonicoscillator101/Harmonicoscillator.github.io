@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>等离子体输运理论(5) | Harmonicoscillator的个人网站</title>
+<meta name="keywords" content="等离子体, 输运理论, 笔记">
+<meta name="description" content="等离体动理方程
+相互作用带电粒子系统
+含相互作用势的 Hamilton 量
+最为简单的方法是为 Hamilton 函数添加相互作用势，如下所示：
+含相互作用势的 Hamilton 函数：
+\begin{aligned}
+H(q,v) &amp;= \sum_{j=1}^N \left[ \frac{1}{2} m_{a_j} v_j^2 &#43; e_{a_j} \Phi_0(q_j) \right] &#43; \sum_{n=1}^N \sum_{j=1}^{j&lt;n} V_{j,n}(q_j,q_n)= \sum_{j=1}^N H_{0_j}^a &#43; \sum_{n=1}^N \sum_{j=1}^{j&lt;n} V_{j,n}
+\end{aligned}
+带电粒子系统中两个粒子首先满足库仑定律，因此势函数可以写为：
+
+$$
+V_{j,n}(q_j,q_n) = e_{a_j} e_{a_n} \frac{1}{|\boldsymbol{q} - \boldsymbol{q}_n|}
+$$
+因此势函数仅仅依赖于粒子之间的距离。
+全电离非相对论等离体模型
+以上的式子满足两个近似：
+
+粒子系统是全电离的，排除了中性粒子，以及电荷交换等其他的相互作用，总之粒子系统是相当理想的。
+粒子系统必须符合非相对论近似，换言之它们的相对速度没有达到光速量级以至于相对论效应可以忽略。
+
+太多复杂的细枝末节先不考虑，这样构成了全电离非相对论等离体模型。">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/transport-of-plasma5/"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/mostima1.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/transport-of-plasma5/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="stylesheet" href="/css/custom.css">
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [
+      ['$', '$'],
+      ['\\(', '\\)']
+    ],
+    displayMath: [
+      ['$$', '$$'],
+      ['\\[', '\\]']
+    ],
+    processEscapes: true,
+    processEnvironments: true,
+    tags: 'ams',
+    packages: {
+      '[+]': ['mathtools', 'bm']
+    }
+  },
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Harmonicoscillator (Alt + H)">
+                <img src="http://localhost:1313/images/mostima.jpg" alt="" aria-label="logo"
+                    height="35">Harmonicoscillator</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/life/" title="生活">
+                    <span>生活</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="时间轴">
+                    <span>时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">文章</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      等离子体输运理论(5)
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-08-03 00:00:00 +0000 UTC'>August 3, 2026</span>&nbsp;·&nbsp;<span>5 min</span>
+
+<div  class="meta-item">&nbsp·&nbsp
+  <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+</div>
+    </div>
+  </header> <details class="toc"  open>
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Table of Contents</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#%e7%ad%89%e7%a6%bb%e4%bd%93%e5%8a%a8%e7%90%86%e6%96%b9%e7%a8%8b" aria-label="等离体动理方程">等离体动理方程</a><ul>
+                    
+            <li>
+                <a href="#%e7%9b%b8%e4%ba%92%e4%bd%9c%e7%94%a8%e5%b8%a6%e7%94%b5%e7%b2%92%e5%ad%90%e7%b3%bb%e7%bb%9f" aria-label="相互作用带电粒子系统">相互作用带电粒子系统</a><ul>
+                    
+            <li>
+                <a href="#%e5%90%ab%e7%9b%b8%e4%ba%92%e4%bd%9c%e7%94%a8%e5%8a%bf%e7%9a%84-hamilton-%e9%87%8f" aria-label="含相互作用势的 Hamilton 量">含相互作用势的 Hamilton 量</a></li>
+            <li>
+                <a href="#%e5%85%a8%e7%94%b5%e7%a6%bb%e9%9d%9e%e7%9b%b8%e5%af%b9%e8%ae%ba%e7%ad%89%e7%a6%bb%e4%bd%93%e6%a8%a1%e5%9e%8b" aria-label="全电离非相对论等离体模型">全电离非相对论等离体模型</a></li>
+            <li>
+                <a href="#%e5%90%ab%e7%9b%b8%e4%ba%92%e4%bd%9c%e7%94%a8%e7%9a%84%e7%ba%a6%e5%8c%96%e5%88%86%e5%b8%83%e5%87%bd%e6%95%b0" aria-label="含相互作用的约化分布函数">含相互作用的约化分布函数</a></li>
+            <li>
+                <a href="#%e4%ba%8c%e4%bd%93%e5%85%b3%e8%81%94%e5%87%bd%e6%95%b0%e4%b8%8e%e5%bc%b1%e8%80%a6%e5%90%88%e8%bf%91%e4%bc%bc" aria-label="二体关联函数与弱耦合近似">二体关联函数与弱耦合近似</a></li>
+            <li>
+                <a href="#debye-%e9%95%bf%e5%ba%a6%e4%b8%8e%e7%ad%89%e7%a6%bb%e4%bd%93%e5%8f%82%e6%95%b0" aria-label="Debye 长度与等离体参数">Debye 长度与等离体参数</a></li>
+            <li>
+                <a href="#%e5%bc%b1%e8%80%a6%e5%90%88%e8%bf%91%e4%bc%bc%e4%b8%8b%e7%9a%84-bbgky-%e5%b1%82%e7%ba%a7%e6%88%aa%e6%96%ad" aria-label="弱耦合近似下的 BBGKY 层级截断">弱耦合近似下的 BBGKY 层级截断</a></li>
+            <li>
+                <a href="#%e4%b8%a4%e7%a7%8d%e7%ae%80%e5%8c%96%e5%bd%a2%e5%bc%8f%e5%8f%8a%e5%85%b6%e7%89%a9%e7%90%86%e6%84%8f%e4%b9%89" aria-label="两种简化形式及其物理意义">两种简化形式及其物理意义</a></li>
+            <li>
+                <a href="#%e4%bb%8e%e5%85%b3%e8%81%94%e6%96%b9%e7%a8%8b%e5%88%b0%e5%8a%a8%e7%90%86%e6%96%b9%e7%a8%8b" aria-label="从关联方程到动理方程">从关联方程到动理方程</a></li>
+            <li>
+                <a href="#%e5%b0%81%e9%97%ad%e7%9a%84%e5%8a%a8%e7%90%86%e6%96%b9%e7%a8%8b" aria-label="封闭的动理方程">封闭的动理方程</a></li></ul>
+            </li>
+            <li>
+                <a href="#vlasov-%e5%8a%a8%e7%90%86%e6%96%b9%e7%a8%8b" aria-label="Vlasov 动理方程">Vlasov 动理方程</a><ul>
+                    
+            <li>
+                <a href="#%e5%8a%a8%e7%90%86%e6%96%b9%e7%a8%8b%e7%9a%84%e6%98%8e%e7%a1%ae%e5%bd%a2%e5%bc%8f%e5%b9%b3%e5%9d%87%e5%9c%ba%e9%a1%b9" aria-label="动理方程的明确形式：平均场项">动理方程的明确形式：平均场项</a></li>
+            <li>
+                <a href="#%e5%b9%b3%e5%9d%87%e7%94%b5%e5%9c%ba%e7%9a%84%e7%89%a9%e7%90%86%e6%84%8f%e4%b9%89" aria-label="平均电场的物理意义">平均电场的物理意义</a></li>
+            <li>
+                <a href="#%e6%80%bb%e7%94%b5%e5%9c%ba%e4%b8%8e-vlasov-%e6%96%b9%e7%a8%8b" aria-label="总电场与 Vlasov 方程">总电场与 Vlasov 方程</a></li>
+            <li>
+                <a href="#%e4%b8%8e%e9%ba%a6%e5%85%8b%e6%96%af%e9%9f%a6%e6%96%b9%e7%a8%8b%e7%bb%84%e7%bb%93%e5%90%88" aria-label="与麦克斯韦方程组结合">与麦克斯韦方程组结合</a>
+            </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><h1 id="等离体动理方程">等离体动理方程<a hidden class="anchor" aria-hidden="true" href="#等离体动理方程">#</a></h1>
+<h2 id="相互作用带电粒子系统">相互作用带电粒子系统<a hidden class="anchor" aria-hidden="true" href="#相互作用带电粒子系统">#</a></h2>
+<h3 id="含相互作用势的-hamilton-量">含相互作用势的 Hamilton 量<a hidden class="anchor" aria-hidden="true" href="#含相互作用势的-hamilton-量">#</a></h3>
+<p>最为简单的方法是为 Hamilton 函数添加相互作用势，如下所示：</p>
+<p>含相互作用势的 Hamilton 函数：</p>
+<p>\begin{aligned}
+H(q,v) &amp;= \sum_{j=1}^N \left[ \frac{1}{2} m_{a_j} v_j^2 + e_{a_j} \Phi_0(q_j) \right] + \sum_{n=1}^N \sum_{j=1}^{j&lt;n} V_{j,n}(q_j,q_n)= \sum_{j=1}^N H_{0_j}^a + \sum_{n=1}^N \sum_{j=1}^{j&lt;n} V_{j,n}
+\end{aligned}</p>
+<p>带电粒子系统中两个粒子首先满足库仑定律，因此势函数可以写为：
+</p>
+$$
+V_{j,n}(q_j,q_n) = e_{a_j} e_{a_n} \frac{1}{|\boldsymbol{q} - \boldsymbol{q}_n|}
+$$<p>
+因此势函数仅仅依赖于粒子之间的距离。</p>
+<h3 id="全电离非相对论等离体模型">全电离非相对论等离体模型<a hidden class="anchor" aria-hidden="true" href="#全电离非相对论等离体模型">#</a></h3>
+<p>以上的式子满足两个近似：</p>
+<ol>
+<li>粒子系统是全电离的，排除了中性粒子，以及电荷交换等其他的相互作用，总之粒子系统是相当理想的。</li>
+<li>粒子系统必须符合非相对论近似，换言之它们的相对速度没有达到光速量级以至于相对论效应可以忽略。</li>
+</ol>
+<p>太多复杂的细枝末节先不考虑，这样构成了全电离非相对论等离体模型。</p>
+<h3 id="含相互作用的约化分布函数">含相互作用的约化分布函数<a hidden class="anchor" aria-hidden="true" href="#含相互作用的约化分布函数">#</a></h3>
+<p>从多粒子相空间分布函数 $F(q, v; t)$ 出发，服从 Liouville 方程，其中 Hamilton 函数 $H$ 包含粒子间相互作用项。</p>
+<p>约化分布函数方程：引入约化单粒子分布函数 $f^a(q_1, v_1; t)$，从 Liouville 方程导出：
+</p>
+$$
+\partial_t f^a(q_1, v_1; t) = L_1^a f^a + \sum_{\beta} \int dq_2 dv_2 \, L_{12}^{a\beta} f^{a\beta}
+$$<p>
+其中 $L_{12}^{a\beta} G = [V_{12}^{a\beta}, G]$ 为相互作用 Liouville 算符。</p>
+<p>单粒子方程中出现了双粒子分布函数 $f^{a\beta}(q_1, v_1, q_2, v_2; t)$。若进一步推导双粒子方程，则会出现三粒子分布函数，形成耦合的无穷层级：
+</p>
+$$
+\partial_t f^a \rightarrow f^{a\beta} \rightarrow f^{a\beta\gamma} \rightarrow \cdots
+$$<p>
+这正是 BBGKY 级列方程，反映了统计力学中的根本困难。</p>
+<h3 id="二体关联函数与弱耦合近似">二体关联函数与弱耦合近似<a hidden class="anchor" aria-hidden="true" href="#二体关联函数与弱耦合近似">#</a></h3>
+<p>二体关联函数的定义：引入二体关联函数描述系统偏离概率密度相互独立的程度：
+</p>
+$$
+g^{\alpha\beta}(q_1,v_1,q_2,v_2;t) = f^{\alpha\beta} - f^\alpha f^\beta
+$$<p>物理性质：</p>
+<ul>
+<li>关联长度 $r_c$：当 $|q_1-q_2| > r_c$ 时，$g^{\alpha\beta} \approx 0$</li>
+<li>归一化性质：$\int dq_1 dv_1 dq_2 dv_2\, g^{\alpha\beta} = 0$</li>
+</ul>
+<p>类似地可以定义三体、四体关联函数，从而表征粒子相互之间的影响程度。</p>
+<h3 id="debye-长度与等离体参数">Debye 长度与等离体参数<a hidden class="anchor" aria-hidden="true" href="#debye-长度与等离体参数">#</a></h3>
+<p>介绍等离体参数的过程中用到了 Debye 长度，这来源于 Debye 屏蔽。</p>
+<p><strong>Debye 屏蔽</strong>：在等离子体中，任何一个带电粒子总是被周围的异性粒子所包围，在超出一定的距离后，该粒子的电场作用就几乎消失，实际上就是被周围的异性粒子所屏蔽了。这个距离就是 Debye 长度。</p>
+<p><strong>Debye 长度</strong>：Debye 长度一般是根据泊松方程解出来的，具有如下的形式：
+</p>
+$$
+\lambda_D = \sqrt{\frac{\epsilon_0 K T_e}{n e^2}}
+$$<p>
+其中 $n$ 为粒子密度，$KT$ 为粒子热能，本书中写为：
+</p>
+$$
+\lambda_D = \left( \frac{4\pi Ze^2 (n_e T_e + n_1 T_1)}{T_e T_1 (1+Z)} \right)^{-\frac{1}{2}}
+$$<p><strong>等离体参数</strong>：定义无量纲数 $\mu_p$：
+</p>
+$$
+\mu_p = \left( \frac{4}{3}\pi \lambda_D n_1 \right)^{-\frac{2}{3}}
+$$<p>
+这可以看作是相互作用能与热能之比。由于等离体是弱耦合的，所以
+</p>
+$$
+\mu_D \ll 1
+$$<p>
+这意味着在低密度或者高温度下满足理想条件。</p>
+<p>因此在弱耦合条件下，相互作用能与平均动能相比非常小，因此前面定义的关联函数 $g^{\alpha\beta}$ 也非常小，与相互作用能是相同量级，多体关联函数则是高阶小量。</p>
+<h3 id="弱耦合近似下的-bbgky-层级截断">弱耦合近似下的 BBGKY 层级截断<a hidden class="anchor" aria-hidden="true" href="#弱耦合近似下的-bbgky-层级截断">#</a></h3>
+<p>截断后的耦合方程：忽略三体及以上关联，得到两个方程：</p>
+<ul>
+<li>
+<p><strong>单粒子方程</strong>：
+</p>
+$$
+\partial_t f^\alpha = L_1^\alpha f^\alpha + \sum_\beta \int d2\, L_{12}^{\alpha\beta} [ f^\alpha f^\beta + g^{\alpha\beta} ]
+$$</li>
+<li>
+<p><strong>二体关联方程</strong>：复杂方程，包含三体相互作用项，不列出。</p>
+</li>
+</ul>
+<h3 id="两种简化形式及其物理意义">两种简化形式及其物理意义<a hidden class="anchor" aria-hidden="true" href="#两种简化形式及其物理意义">#</a></h3>
+<p><strong>简化形式 [BL]：Balescu-Lenard 方程</strong><br>
+保留与第三粒子的相互作用：
+</p>
+$$
+\partial_t g^{\alpha\beta} - (L_1^\alpha + L_2^\beta)g^{\alpha\beta} = \sum_\gamma \int d3\,
+\left[
+L_{13}^{\alpha\gamma} f^\alpha g^{\beta\gamma} + L_{23}^{\beta\gamma} f^\beta g^{\alpha\gamma}
+\right] + L_{12}^{\alpha\beta} f^\alpha f^\beta
+$$<p>
+描述多体相互作用和集体效应。</p>
+<p><strong>简化形式 [L]：Landau 方程</strong><br>
+仅考虑两体碰撞驱动：
+</p>
+$$
+\partial_t g^{\alpha\beta} - (L_1^\alpha + L_2^\beta)g^{\alpha\beta} = L_{12}^{\alpha\beta} f^\alpha f^\beta
+$$<p>
+描述纯两体碰撞演化，忽略集体效应。</p>
+<h3 id="从关联方程到动理方程">从关联方程到动理方程<a hidden class="anchor" aria-hidden="true" href="#从关联方程到动理方程">#</a></h3>
+<p><strong>目标：消去关联函数</strong></p>
+<p>单粒子方程包含关联函数 $g^{\alpha\beta}$：
+</p>
+$$
+\partial_t f^\alpha = L_1^\alpha f^\alpha + \sum_\beta \int d2\, L_{12}^{\alpha\beta} \left[ f^\alpha f^\beta + g^{\alpha\beta} \right]
+$$<p>
+需将 $g^{\alpha\beta}$ 表示为 $f$ 的函数，得到封闭方程。</p>
+<p><strong>动理区假设</strong>：在动理演化阶段，关联函数成为单粒子分布函数的瞬时泛函：
+</p>
+$$
+g^{\alpha\beta}(t) = g^{\alpha\beta}[f(t)]
+$$<p>
+即关联函数由同一时刻的单粒子分布函数完全决定。</p>
+<h3 id="封闭的动理方程">封闭的动理方程<a hidden class="anchor" aria-hidden="true" href="#封闭的动理方程">#</a></h3>
+<p>将泛函关系代入单粒子方程，得到：</p>
+$$
+\partial_t f^\alpha(1;t) = L_1^\alpha f^\alpha(1;t) + \sum_\beta \int d2\, L_{12}^{\alpha\beta} f^\alpha f^\beta + \mathcal{K}^\alpha[f(t)]
+$$<p>其中 $\mathcal{K}^\alpha[f(t)]$ 为碰撞项，来源于关联函数 $g^{\alpha\beta}[f]$ 的贡献。</p>
+<p>这样得到了动理方程的一般形式，表征一个单粒子含时分布函数一个闭合、非线性的演化方程。可以注意到在引入线性泛函后，Liouville 结构就已然消失了。</p>
+<hr>
+<h2 id="vlasov-动理方程">Vlasov 动理方程<a hidden class="anchor" aria-hidden="true" href="#vlasov-动理方程">#</a></h2>
+<h3 id="动理方程的明确形式平均场项">动理方程的明确形式：平均场项<a hidden class="anchor" aria-hidden="true" href="#动理方程的明确形式平均场项">#</a></h3>
+<p>相互作用 Liouville 算符：
+</p>
+$$
+L_{12}^{\alpha\beta} = [\nabla_1 V^{\alpha\beta}(q_1-q_2)] \cdot (\partial_1 - \partial_2)
+= e_\alpha e_\beta \left( \nabla_1 \frac{1}{|q_1-q_2|} \right) \cdot (\partial_1 - \partial_2)
+$$<p>
+其中 $\nabla_1 \equiv \partial/\partial q_1$，$\partial_1 \equiv \partial/\partial v_1$。</p>
+<p><strong>平均场项推导</strong>：
+</p>
+$$
+\begin{aligned}
+\sum_\beta & \int d2\, L_{12}^{\alpha\beta} f^\alpha(1;t)f^\beta(2;t) \\
+&= \left( \nabla_1 \sum_\beta \int d2\, V_{12}^{\alpha\beta} f^\beta(2;t) \right) \cdot \frac{1}{m_\alpha} \partial_1 f^\alpha(1;t) \\
+&\equiv -\frac{e_\alpha}{m_\alpha} \bar{E}(q_1;t) \cdot \partial_1 f^\alpha(1;t)
+\end{aligned}
+$$<h3 id="平均电场的物理意义">平均电场的物理意义<a hidden class="anchor" aria-hidden="true" href="#平均电场的物理意义">#</a></h3>
+<p>平均电场定义：
+</p>
+$$
+\bar{E}(q_1;t) = -\nabla_1\bar{\Phi}(q_1;t)
+$$<p>
+</p>
+$$
+\bar{\Phi}(q_1;t) = \sum_\beta e_\beta \int dq_2 dv_2 \frac{1}{|q_1-q_2|} f^\beta(q_2,v_2;t)
+$$<p><strong>物理解释</strong>：平均势 $\bar{\Phi}$ 由宏观电荷分布 $\sigma(q;t)$ 产生，满足泊松方程：</p>
+<p>Poisson 方程：
+</p>
+$$
+\nabla^2 \bar{\Phi}(q;t) = -4\pi\sigma(q;t), \qquad 
+\sigma(q;t) = \sum_\beta e_\beta \int dv\, f^\beta(q,v;t)
+$$<p>
+平均电场 $E_0$ 由外部源产生，满足 Laplace 方程（$\sigma=0$）。</p>
+<h3 id="总电场与-vlasov-方程">总电场与 Vlasov 方程<a hidden class="anchor" aria-hidden="true" href="#总电场与-vlasov-方程">#</a></h3>
+<p>总电场为外场与平均场之和：
+</p>
+$$
+E(q;t) = E_0(q;t) + \bar{E}(q;t)
+$$<p>
+对应势 $\Phi = \Phi_0 + \bar{\Phi}$ 满足带源项的 Poisson 方程。</p>
+<p>忽略碰撞项 $\mathcal{K}^\alpha$，动理方程化为：</p>
+<p><strong>Vlasov 方程</strong>：
+</p>
+$$
+\partial_t f^\alpha(1;t) = -v_1\cdot\nabla_1 f^\alpha - \frac{e_\alpha}{m_\alpha}
+\left((v_1\times B) + E \right) \cdot \partial_1 f^\alpha
+$$<p>
+这与 Liouville 方程的第一种形式很像，但是注意此处的电场应当满足 Poisson 方程，因此不具有 Liouville 方程那样的线性性，反而会带来湍流。</p>
+<h3 id="与麦克斯韦方程组结合">与麦克斯韦方程组结合<a hidden class="anchor" aria-hidden="true" href="#与麦克斯韦方程组结合">#</a></h3>
+<p>在这里面，$E$ 是总场，而 $B$ 纯粹是外场，比较完全的处理应当包括电磁相互作用。对磁场做一个简单的处理：粒子的平均运动成为引起内磁场 $B(q,t)$ 的源，将其与外磁场相加从而得到总磁场。</p>
+<p><strong>完整 Maxwell 方程组</strong>：
+</p>
+$$
+\begin{aligned}
+\nabla\cdot E(q;t) &= 4\pi \sum_\beta e_\beta \int dv\, f^\beta(q,v;t) \\
+\nabla\times E(q;t) &= -c^{-1} \partial_t B(q;t) \\
+\nabla\cdot B(q;t) &= 0 \\
+\nabla\times B(q;t) &= c^{-1} \partial_t E(q;t) + \frac{4\pi}{c} \sum_\beta e_\beta \int dv\, v\, f^\beta(q,v;t)
+\end{aligned}
+$$
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93/">等离子体</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%BE%93%E8%BF%90%E7%90%86%E8%AE%BA/">输运理论</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/">笔记</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Harmonicoscillator的个人网站</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+
+<div class="busuanzi-footer">
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</div></body>
+
+</html>
