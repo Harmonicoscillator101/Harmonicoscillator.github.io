@@ -185,11 +185,16 @@ MathJax = {
   </header>
   <div class="entry-content">
     <p>等离体动理方程 相互作用带电粒子系统 含相互作用势的 Hamilton 量 最为简单的方法是为 Hamilton 函数添加相互作用势，如下所示：
-含相互作用势的 Hamilton 函数： $$\begin{aligned}H(q,v) &amp;= \sum_{j=1}^N \left[ \frac{1}{2} m_{a_j} v_j^2 &#43; e_{a_j} \Phi_0(q_j) \right] &#43; \sum_{n=1}^N \sum_{j=1}^{j...</p>
+含相互作用势的 Hamilton 函数：
+\begin{aligned} H(q,v) &amp;= \sum_{j=1}^N \left[ \frac{1}{2} m_{a_j} v_j^2 &#43; e_{a_j} \Phi_0(q_j) \right] &#43; \sum_{n=1}^N \sum_{j=1}^{j&lt;n} V_{j,n}(q_j,q_n)= \sum_{j=1}^N H_{0_j}^a &#43; \sum_{n=1}^N \sum_{j=1}^{j&lt;n} V_{j,n} \end{aligned}
+带电粒子系统中两个粒子首先满足库仑定律，因此势函数可以写为： $$V_{j,n}(q_j,q_n) = e_{a_j} e_{a_n} \frac{1}{|\boldsymbol{q} - \boldsymbol{q}_n|}$$ 因此势函数仅仅依赖于粒子之间的距离。
+全电离非相对论等离体模型 以上的式子满足两个近似：
+粒子系统是全电离的，排除了中性粒子，以及电荷交换等其他的相互作用，总之粒子系统是相当理想的。 粒子系统必须符合非相对论近似，换言之它们的相对速度没有达到光速量级以至于相对论效应可以忽略。 太多复杂的细枝末节先不考虑，这样构成了全电离非相对论等离体模型。
+...</p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-08-03 00:00:00 +0000 UTC'>August 3, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+<span title='2026-08-03 00:00:00 +0000 UTC'>August 3, 2026</span>&nbsp;·&nbsp;<span>5 min</span></footer>
   <a class="entry-link" aria-label="post link to 等离子体输运理论(5)" href="http://localhost:1313/posts/transport-of-plasma5/"></a>
 </article>
 
@@ -237,7 +242,7 @@ Liouville 定理： $$\frac{dF}{dt} = \frac{\partial F}{\partial t} &#43; \{F, 
   </div>
   <footer class="entry-footer">
 
-<span title='2026-07-29 12:18:27 +0800 CST'>July 29, 2026</span>&nbsp;·&nbsp;<span>4 min</span></footer>
+<span title='2026-07-29 12:18:27 +0800 +0800'>July 29, 2026</span>&nbsp;·&nbsp;<span>4 min</span></footer>
   <a class="entry-link" aria-label="post link to 等离子体输运理论(0)" href="http://localhost:1313/posts/transport-of-plasma0/"></a>
 </article>
 
@@ -282,7 +287,7 @@ Frenet坐标系 对于三维空间的任意一条光滑的曲线，取其上任�
   </div>
   <footer class="entry-footer">
 
-<span title='2026-07-28 20:34:48 +0800 CST'>July 28, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
+<span title='2026-07-28 20:34:48 +0800 +0800'>July 28, 2026</span>&nbsp;·&nbsp;<span>1 min</span></footer>
   <a class="entry-link" aria-label="post link to 我当前正在进行的工作" href="http://localhost:1313/posts/my-article-about-my-works/"></a>
 </article>
     </main>

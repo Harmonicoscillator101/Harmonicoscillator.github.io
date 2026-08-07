@@ -6,8 +6,17 @@
     <description>Recent content in 文章 on Harmonicoscillator的个人网站</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在个人Windows电脑上使用VS Code中搭建Qiskit量子计算开发环境</title>
+      <link>http://localhost:1313/posts/how-to-set-up-qiskit/</link>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-set-up-qiskit/</guid>
+      <description>&lt;h1 id=&#34;在个人windows电脑上使用vs-code搭建qiskit量子计算开发环境&#34;&gt;在个人Windows电脑上使用VS Code搭建Qiskit量子计算开发环境&lt;/h1&gt;
+&lt;h2 id=&#34;前言什么是qiskit&#34;&gt;前言：什么是Qiskit&lt;/h2&gt;
+&lt;p&gt;Qiskit是IBM团队开发的性能最高的开源量子计算和算法研究软件栈。构建、优化并大规模执行量子工作负载。它本身基于python，提供开源的强大工具和简化的工作流程，帮助学生和研究者开发量子计算算法并进行实验，本质上是利用经典代码来“模拟”量子电路。但是，它最强大之处在于我们在电脑上写出来的代码可以直接连接到IBM团队的超导量子计算机上，实现真正物理世界中的量子计算。这当然不是免费的，每个用户每周有10分钟的免费时间，再往后就要收费了。更多详细内容可以&lt;a href=&#34;https://www.ibm.com/quantum/qiskit&#34;&gt;参见官网&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>等离子体输运理论(5)</title>
       <link>http://localhost:1313/posts/transport-of-plasma5/</link>

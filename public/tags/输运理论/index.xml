@@ -17,15 +17,11 @@
 &lt;h2 id=&#34;相互作用带电粒子系统&#34;&gt;相互作用带电粒子系统&lt;/h2&gt;
 &lt;h3 id=&#34;含相互作用势的-hamilton-量&#34;&gt;含相互作用势的 Hamilton 量&lt;/h3&gt;
 &lt;p&gt;最为简单的方法是为 Hamilton 函数添加相互作用势，如下所示：&lt;/p&gt;
-&lt;p&gt;含相互作用势的 Hamilton 函数：
-&lt;/p&gt;
-$$
-\begin{aligned}
-H(q,v) &amp;= \sum_{j=1}^N \left[ \frac{1}{2} m_{a_j} v_j^2 + e_{a_j} \Phi_0(q_j) \right] + \sum_{n=1}^N \sum_{j=1}^{j&lt;n} V_{j,n}(q_j,q_n) \\
-&amp;= \sum_{j=1}^N H_{0_j}^a + \sum_{n=1}^N \sum_{j=1}^{j&lt;n} V_{j,n}
-\end{aligned}
-$$&lt;p&gt;
-带电粒子系统中两个粒子首先满足库仑定律，因此势函数可以写为：
+&lt;p&gt;含相互作用势的 Hamilton 函数：&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+H(q,v) &amp;amp;= \sum_{j=1}^N \left[ \frac{1}{2} m_{a_j} v_j^2 + e_{a_j} \Phi_0(q_j) \right] + \sum_{n=1}^N \sum_{j=1}^{j&amp;lt;n} V_{j,n}(q_j,q_n)= \sum_{j=1}^N H_{0_j}^a + \sum_{n=1}^N \sum_{j=1}^{j&amp;lt;n} V_{j,n}
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;带电粒子系统中两个粒子首先满足库仑定律，因此势函数可以写为：
 &lt;/p&gt;
 $$
 V_{j,n}(q_j,q_n) = e_{a_j} e_{a_n} \frac{1}{|\boldsymbol{q} - \boldsymbol{q}_n|}
